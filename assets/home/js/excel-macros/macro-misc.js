@@ -62,6 +62,18 @@ $(this).on('keypress', function (event) {
   }
 })
 
+// IE Support Depreciation Notice.
+var userAgent = window.navigator.userAgent;
+if (userAgent.indexOf("Trident/7.0") > -1)
+  $("#IEDetection").show();
+else if (userAgent.indexOf("Trident/6.0") > -1)
+  $("#IEDetection").show();
+else if (userAgent.indexOf("Trident/5.0") > -1)
+  $("#IEDetection").show();
+else
+  console.log("Compatibility Detection: The user is using a compatible browser!");
+
+
 var dataFolder;
 dataFolder = prompt("You are viewing a file repository. File repositories have folders containing different types of files. You must navigate to one of the sub folders to view a folder containing files. Below are options to do this.\n\n--- How to Navigate Folders --- \n1.) Navigate to 'Data Options ---> Edit File Info' to view a list of folders.\n2.) Type an existing folder name into the box below to view it's files.\n3.) Type a new file name into the box below to create a new folder.\n4.) Keep the box below empty to view folders in 'Data Options'.");
 
