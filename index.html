@@ -68,7 +68,7 @@
                     <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>,
                     <a href="https://chrome.google.com/">Google Chrome</a>, or
                     <a href="https://mozilla.org/firefox/">Firefox</a>.
-                    
+
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -286,9 +286,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- IE Detection -->
+    <script>
+        // IE Support Depreciation Notice.
+        var userAgent = window.navigator.userAgent;
+        if (userAgent.indexOf("Trident/7.0") > -1)
+            document.getElementById("IEDetection").style.display = "block";
+        else if (userAgent.indexOf("Trident/6.0") > -1)
+            document.getElementById("IEDetection").style.display = "block";
+        else if (userAgent.indexOf("Trident/5.0") > -1)
+            document.getElementById("IEDetection").style.display = "block";
+        else
+            console.log("Compatibility Detection: The user is using a compatible browser!");
+    </script>
 
-    <!-- Scroll JS -->
-    <script src="assets/home/js/scroll.js"></script>
 </body>
 
 </html>
