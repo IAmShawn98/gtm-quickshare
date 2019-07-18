@@ -21,7 +21,7 @@ $(function () {
 console.warn("%cDatabase Connection Established!", "color: #1a7343;");
 
 // Define Success Audio.
-var audio = new Audio('assets/home/audio/success.mp3');
+var audio = new Audio('../assets/home/audio/success.mp3');
 
 // Define current date format.
 var mDate = moment().format("MM.DD.YY");
@@ -67,6 +67,11 @@ dataFolder = prompt("You are viewing a file repository. File repositories have f
 
 // Reference the database we're writing to.
 var gtmSlot1 = firebase.database().ref('gtm-slot1/' + dataFolder + "/");
+
+// Display Database Name In Data Folder Container.
+var displayDBName = document.querySelector(".displayDBName").innerHTML = dbConfig.projectId + "<span class='text-dark'> / " + dataFolder + "</span>";
+var displayDBNameCrumbs = document.querySelector(".displayDBNameCrumbs").innerHTML = dbConfig.projectId + "<span class='text-dark'> / " + dataFolder + "</span>";
+
 
 
 // gtmSlot1.on('value', function (snapshot) {
@@ -230,6 +235,12 @@ function buildTable() {
         var buttons = $('<button style="font-size: 120%; color: #000000;" id="myInput" onclick="window.location.reload();" class="btn btn-sm btn-outline-secondary bg-light m-1 font-size-"><i class="fa fa-folder text-warning" aria-hidden="true"></i> ' + key + '</button>')
         buttons.appendTo('#btnFolders');
 
+        // Folder / File ID card title.
+        var dfTitle = document.querySelector(".dfTitle");
+
+        // Folder / File ID card DB name.
+        var dbName = document.querySelector(".dbName");
+
         // If the folder is undefined, tell the user they need to select one.
         if (dataFolder === "") {
           txtFolderName.textContent = "No Folder Selected";
@@ -238,6 +249,7 @@ function buildTable() {
           // If the folder is selected, call it's name in the folder name title.
           txtFolderName.textContent = dataFolder;
           dfTitle.textContent = "File IDs";
+          tabFolders.textContent = dataFolder + " IDs";
         }
         // To prevent dupes, break.
         break;
