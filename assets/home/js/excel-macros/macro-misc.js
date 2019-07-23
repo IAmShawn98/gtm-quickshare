@@ -21,7 +21,7 @@ $(function () {
 console.warn("%cDatabase Connection Established!", "color: #1a7343;");
 
 // Define Success Audio.
-var audio = new Audio('../assets/home/audio/success.mp3');
+var audio = new Audio('../audio/success.mp3');
 
 // Define current date format.
 var mDate = moment().format("MM.DD.YY");
