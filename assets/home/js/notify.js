@@ -52,17 +52,13 @@
 		icon_type: 'class',
 		template: '<div id="toast" class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">' +
 			'<div class="toast-header">' +
-			'<img class="mr-1" width="20" height="20" src="assets/home/images/fav-icon/logoFave.ico" alt="logFave.ico" />' +
 			'<strong class="mr-auto">{1}</strong>' +
 			'<small class="text-muted">just now</small>' +
 			'<button type="button" onclick="removePrompt();" class="ml-2 mb-1 close" data-dismiss="toast"  aria-label="Close">' +
 			'<span aria-hidden="true">×</span></button> </div> <div class="toast-body">{2}</div>' +
 			'</div>'
 	};
-
-
-
-
+	
 	String.format = function () {
 		var args = arguments;
 		var str = arguments[0];

@@ -1,9 +1,9 @@
 # gtm-quickshare
 ### Introduction
-<p>GTM QuickShare is a file repository built to connect your team to the files you need on a daily basis. The QuickShare repository makes<br> accessing files as easy as clicking a download link so you won't have to constantly email your colleagues and clients about one file. We<br> keep all of your files categorized and organized, synchronously!</p>
+<p>GTM QuickShare is a file repository built to connect your team to the files you need on a daily basis. The QuickShare repository makes accessing files as easy as clicking a download link so you won't have to constantly email your colleagues and clients about one file. We keep all of your files categorized and organized, synchronously!</p>
 
 ### Disclaimer
-*<p>GTM QuickShare is an open-source file repository created for comapnywide internal use ONLY. We currently do not plan to support realtime<br> database requests outside of the official storage slots that house our files. We do not hold any sensitive data and backup<br> our files regularly. Created by Shawn Luther for Global Tax Management.</p>*
+*<p>GTM QuickShare is an open-source file repository created for comapnywide internal use ONLY. We currently do not plan to support realtime database requests outside of the official storage slots that house our files. We do not hold any sensitive data and backup our files regularly. Created by Shawn Luther for Global Tax Management.</p>*
 
 ## Application Documentation
 
