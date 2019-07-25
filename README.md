@@ -68,9 +68,9 @@ The 'QuickShare Portal' is a convenient browser Extension that allows you to acc
    That will run the QuickShare Portal so you can use it. If you did the installation correctly, you should get
    the image below:
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo]
+![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo2]
 
-[logo]: https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png "Logo Title Text 2"
+[logo2]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/portal_browser.png?raw=true "Logo Title Text 2"
 
 ### Shortcut Didn't Work Right? ---> The 'Slightly' Longer Way
 1. Open Google Chrome in a new tab, and in the upper right corner of the screen, click on the three dots and click on 'Settings'.
@@ -83,9 +83,9 @@ The 'QuickShare Portal' is a convenient browser Extension that allows you to acc
    That will run the QuickShare Portal so you can use it. If you did the installation correctly, you should get
    the image below:
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo]
+![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo2]
 
-[logo]: https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png "Logo Title Text 2"
+[logo2]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/portal_browser.png?raw=true "Logo Title Text 2"
 
 ## Understanding File Repositories
 QuickShare File repositories are like big boxes containing file folders.
@@ -104,9 +104,9 @@ Please Note: *These instructions are also listed below.*
 3. Click on one of the folders to bring you back here or do the shortcut 'CTRL + R'.
 4. Then enter the name of the folder into the box below. The Sync Table should then populate with your folder data.
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo]
+![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo3]
 
-[logo]: https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png "Logo Title Text 2"
+[logo3]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/table_example.png?raw=true "Logo Title Text 2"
 *Example of a populated Sync Table from folder data*
 
 ### Creating New Folders
