@@ -132,9 +132,9 @@ whatever it is your doing with them. Try it! Look for a file in the table and se
 You will notice the table will remove files that don't match your search criteria but will
 show multiple files if they share farmiliar characteristics.
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo]
+![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo4]
 
-[logo]: https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png "Logo Title Text 2"
+[logo4]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/table_filter_example.gif?raw=true "Logo Title Text 2"
 *This is a demo of file searching.*
 
 ### Downloading Files
