@@ -54,16 +54,25 @@ $(this).on('keypress', function (event) {
   }
 })
 
-// Shortcut to 'Upload Files'.
+// Shortcut to 'Push File'.
 $(this).on('keypress', function (event) {
-  var keyU = 80; // 'U' Key.
+  var keyU = 80; // 'P' Key.
   if (event.keyCode == keyU) {
     $("#btnSubmit").click();
+    window.location.reload();
   }
 })
 
 var dataFolder;
-dataFolder = prompt("You are viewing a file repository. File repositories have folders containing different types of files. You must navigate to one of the sub folders to view a folder containing files. Below are options to do this.\n\n--- How to Navigate Folders --- \n1.) Navigate to 'Data Options ---> Edit File Info' to view a list of folders.\n2.) Type an existing folder name into the box below to view it's files.\n3.) Type a new file name into the box below to create a new folder.\n4.) Keep the box below empty to view folders in 'Data Options'.");
+dataFolder = prompt("                           --- Folder Navigation Instructions ---\n" +
+"1.) Type the name of the folder you want to view in the box below. If you don't know which folder you want, leave it blank and do #2. \n" +
+"2.) Navigate to 'Data Options ---> Data Folders' to view a list of all available folders.\n"+
+"3.) Click on one of the folders to bring you back here or do the shortcut 'CTRL + R'. " +
+"Then enter the name of the folder into the box below. The Sync Table should then populate with your folder data.\n\n" +
+"                           --- Create New Folder Instructions ---\n" +
+"1.) Enter a new folder name into the box below, ensure the name you picked isn't already an existing folder.\n" +
+"2.) Upload at least one file and the folder should appear in the 'Data Folders' tab in 'Data Options'. \n\n" +
+"Have questions? Contact me at 'sluther@gtmtax.com'");
 
 // Reference the database we're writing to.
 var gtmSlot1 = firebase.database().ref('gtm-slot1/' + dataFolder + "/");
@@ -71,20 +80,6 @@ var gtmSlot1 = firebase.database().ref('gtm-slot1/' + dataFolder + "/");
 // Display Database Name In Data Folder Container.
 var displayDBName = document.querySelector(".displayDBName").innerHTML = dbConfig.projectId + "<span class='text-dark'> / " + dataFolder + "</span>";
 var displayDBNameCrumbs = document.querySelector(".displayDBNameCrumbs").innerHTML = dbConfig.projectId + "<span class='text-dark'> / " + dataFolder + "</span>";
-
-
-
-// gtmSlot1.on('value', function (snapshot) {
-//   var msg = snapshot.val();
-//   console.log(JSON.stringify(msg.NRG));
-//   var nrg = JSON.stringify(msg.NRG);
-//   // var key = -LioUAK9CdNGrowK9EE9;
-//   var topics = [nrg.fName]
-//   for (var i = 0; i < topics.length; i++) {
-//     var buttons = $('<button>' + topics[i] + '</button>')
-//     buttons.appendTo('#btnFolders');
-//   }
-// });
 
 // UPLOAD BUTTON CLICK EVENT.
 
