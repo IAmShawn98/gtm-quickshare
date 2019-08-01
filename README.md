@@ -9,26 +9,26 @@
 
 ### Table of Contents:
 - [gtm-quickshare](#gtm-quickshare)
-    - [Introduction](#Introduction)
-    - [Disclaimer](#Disclaimer)
-    - [GTM QuickShare Documentation](#GTM-QuickShare-Documentation)
-    - [Table of Contents:](#Table-of-Contents)
-  - [Getting Started](#Getting-Started)
-    - [Navigating to GTM QuickShare.](#Navigating-to-GTM-QuickShare)
-    - [Explaining the QuickShare Portal](#Explaining-the-QuickShare-Portal)
-    - [Installing the QuickShare Portal](#Installing-the-QuickShare-Portal)
-    - [Install the QuickShare Portal (Google Chrome || The Short Way)](#Install-the-QuickShare-Portal-Google-Chrome--The-Short-Way)
-    - [Shortcut Didn't Work Right? ---> The 'Slightly' Longer Way](#Shortcut-Didnt-Work-Right-----The-Slightly-Longer-Way)
-  - [Understanding File Repositories](#Understanding-File-Repositories)
-    - [Navigating to Folders](#Navigating-to-Folders)
-    - [Creating New Folders](#Creating-New-Folders)
-    - [Understanding Sync Tables](#Understanding-Sync-Tables)
-  - [Becoming A 'Pro'](#Becoming-A-Pro)
-    - [File Search](#File-Search)
-    - [Downloading Files](#Downloading-Files)
-    - [Uploading Files](#Uploading-Files)
-  - [Change Logs](#Change-Logs)
-    - [GTM QuickShare V1.0.0-LIVE-T](#GTM-QuickShare-V100-LIVE-T)
+    - [Introduction](#introduction)
+    - [Disclaimer](#disclaimer)
+    - [GTM QuickShare Documentation](#gtm-quickshare-documentation)
+    - [Table of Contents:](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Navigating to GTM QuickShare.](#navigating-to-gtm-quickshare)
+    - [Explaining the QuickShare Portal](#explaining-the-quickshare-portal)
+    - [Installing the QuickShare Portal](#installing-the-quickshare-portal)
+    - [Install the QuickShare Portal (Google Chrome || The Short Way)](#install-the-quickshare-portal-google-chrome--the-short-way)
+    - [Shortcut Didn't Work Right? ---> The 'Slightly' Longer Way](#shortcut-didnt-work-right-----the-slightly-longer-way)
+  - [Understanding File Repositories](#understanding-file-repositories)
+    - [Navigating to Folders](#navigating-to-folders)
+    - [Creating New Folders](#creating-new-folders)
+    - [Understanding Sync Tables](#understanding-sync-tables)
+  - [Becoming A 'Pro'](#becoming-a-pro)
+    - [File Search](#file-search)
+    - [Downloading Files](#downloading-files)
+    - [Uploading Files](#uploading-files)
+  - [Change Logs](#change-logs)
+    - [GTM QuickShare V1.0.0-LIVE-T](#gtm-quickshare-v100-live-t)
 <hr />
 
 ## Getting Started
@@ -174,12 +174,12 @@ The QuickShare changelogs represent the most recent list of bug fixes, known iss
   2. Bugs Fixed:
    * Fixed a bug causing the upload sound not to play during a shortcut upload.
    * Fixed a bug that caused the IE detector not to display the browser warning.
-   * Updated Documentation (The last One Pushed Was Poorly Written).
-   * Updated the Folder navigation prompt to better explain the upload process.
-   * GTM QuickShare has a fresh new design from it's previous beta demo build.
-   * Added a few more featurettes to to the landing page to better answer 'WHY QuickShare?'.
-   * Got rid of the boring old carousel photos in favor of more exciting and engaging gifs.
-   * The Sync Table has been totally redesigned with even smarter autofill features.
-   * Added search filtering to allow users to find their files in the haystack of 10+ files.
+  3. Features & Updates:
+   * Deleting a file no longer requires you to enter a 'unique ID'.
    * The table now displays the number of files contained with in a folder.
-   * Deleting a file no longer requires you to enter a 'unique ID' the process is not automatic!
+   * Added search filtering to make searching files through Sync Tables easier.
+   * The Sync Table has been totally redesigned with even smarter autofill features.
+   * Got rid of the boring old carousel photos in favor of better looking gifs.
+   * Added a few more featurettes to the landing page to better answer 'WHY QuickShare?'.
+   * GTM QuickShare has a fresh new design from it's previous beta build.
+   * Updated the Folder navigation prompt to better explain the upload process.
