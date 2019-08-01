@@ -1,8 +1,8 @@
 # gtm-quickshare
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][preview]
+![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/appPreview.gif?raw=true)][preview]
 
-[preview]: https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png "Logo Title Text 2"
+[preview]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/appPreview.gif?raw=true "Logo Title Text 2"
 
 ### Introduction
 <p>GTM QuickShare is an internal file repository built to house your teams Excel Macros, Workbooks, user guides, documentation, and any piece of software that needs constant attention. The days of repetitively sending group emails to your colleagues about minor updates to your tax software are over. The QuickShare repository makes accessing files as easy as clicking a download link. We keep all of your files categorized and organized, synchronously!</p>
