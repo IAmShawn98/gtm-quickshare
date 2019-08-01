@@ -174,12 +174,12 @@ The QuickShare changelogs represent the most recent list of bug fixes, known iss
 
 ### GTM QuickShare V1.0.0-LIVE-T
 * QuickShare Version Updated On 7.25.2019
-  1. Version Update:
+  1. **Version Update**:
   * Moved into 'LIVE-T' (V1.0.0-LIVE-T) from 'Closed Beta "DEV DEMO"'.
   2. Bugs Fixed:
    * Fixed a bug causing the upload sound not to play during a shortcut upload.
    * Fixed a bug that caused the IE detector not to display the browser warning.
-  3. Features & Updates:
+  3. **Features & Updates**:
    * Deleting a file no longer requires you to enter a 'unique ID'.
    * The table now displays the number of files contained with in a folder.
    * Added search filtering to make searching files through Sync Tables easier.
