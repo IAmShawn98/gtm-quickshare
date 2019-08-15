@@ -14,7 +14,7 @@ firebase.initializeApp(dbConfig);
 
 // Global ToolTip.
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 // Event Logger.
@@ -63,16 +63,15 @@ $(this).on('keypress', function (event) {
   }
 })
 
-var dataFolder;
 dataFolder = prompt("                           --- Folder Navigation Instructions ---\n" +
-"1.) Type the name of the folder you want to view in the box below. If you don't know which folder you want, leave it blank and do #2. \n" +
-"2.) Navigate to 'Data Options ---> Data Folders' to view a list of all available folders.\n"+
-"3.) Click on one of the folders to bring you back here or do the shortcut 'CTRL + R'. " +
-"Then enter the name of the folder into the box below. The Sync Table should then populate with your folder data.\n\n" +
-"                           --- Create New Folder Instructions ---\n" +
-"1.) Enter a new folder name into the box below, ensure the name you picked isn't already an existing folder.\n" +
-"2.) Upload at least one file and the folder should appear in the 'Data Folders' tab in 'Data Options'. \n\n" +
-"Have questions? Contact me at 'sluther@gtmtax.com'");
+  "1.) Type the name of the folder you want to view in the box below. If you don't know which folder you want, leave it blank and do #2. \n" +
+  "2.) Navigate to 'Data Options ---> Data Folders' to view a list of all available folders.\n" +
+  "3.) Click on one of the folders to bring you back here or do the shortcut 'CTRL + R'. " +
+  "Then enter the name of the folder into the box below. The Sync Table should then populate with your folder data.\n\n" +
+  "                           --- Create New Folder Instructions ---\n" +
+  "1.) Enter a new folder name into the box below, ensure the name you picked isn't already an existing folder.\n" +
+  "2.) Upload at least one file and the folder should appear in the 'Data Folders' tab in 'Data Options'. \n\n" +
+  "Have questions? Contact me at 'sluther@gtmtax.com'");
 
 // Reference the database we're writing to.
 var gtmSlot1 = firebase.database().ref('gtm-slot1/' + dataFolder + "/");
@@ -239,6 +238,7 @@ function buildTable() {
         // If the folder is undefined, tell the user they need to select one.
         if (dataFolder === "") {
           txtFolderName.textContent = "No Folder Selected";
+          dataFolder = "NRG";
           // $("#dataBody").hide();
         } else {
           // If the folder is selected, call it's name in the folder name title.
