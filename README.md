@@ -143,7 +143,7 @@ show multiple files if they share farmiliar characteristics.
 *This is a demo of file searching.*
 
 ### Downloading Files
-The one is pretty simple - In the Sync Table under 'File Name' click on any of file names to receive them.
+This one is pretty simple - In the Sync Table under 'File Name' click on any of file names to receive them.
 
 ### Uploading Files
 'Casucal' (TIME CONSUMING) Upload Approach
@@ -181,7 +181,7 @@ The QuickShare changelogs represent the most recent list of bug fixes, known iss
    * Fixed a bug that caused the IE detector not to display the browser warning.
   3. **Features & Updates**:
    * Deleting a file no longer requires you to enter a 'unique ID'.
-   * The table now displays the number of files contained with in a folder.
+   * The table now displays the number of files contained within a folder.
    * Added search filtering to make searching files through Sync Tables easier.
    * The Sync Table has been totally redesigned with even smarter autofill features.
    * Got rid of the boring old carousel photos in favor of better looking gifs.
