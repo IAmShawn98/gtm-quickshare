@@ -242,7 +242,6 @@ function buildTable() {
             $(".fa-cog").click();
             $("#tabFolders").click();
           }, 500);
-          dataFolder = "NRG";
           // $("#dataBody").hide();
         } else {
           // If the folder is selected, call it's name in the folder name title.
