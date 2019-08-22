@@ -238,6 +238,10 @@ function buildTable() {
         // If the folder is undefined, tell the user they need to select one.
         if (dataFolder === "") {
           txtFolderName.textContent = "No Folder Selected";
+          setTimeout(() => {
+            $(".fa-cog").click();
+            $("#tabFolders").click();
+          }, 500);
           dataFolder = "NRG";
           // $("#dataBody").hide();
         } else {
