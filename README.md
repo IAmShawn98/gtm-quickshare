@@ -4,8 +4,6 @@
 
 [preview]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/appPreview.gif?raw=true "Logo Title Text 2"
 
-### ATTENTION: At this time we are upgrading our view engine, you may experience slow downs or crashes during this migration process.
-
 ### Introduction
 <p>GTM QuickShare is an open source file repository that specializes in maintaining tax software. Have over a dozen workbooks containing Excel Macros or versioned software? We provide the storage and space you need to host, seperate, and maintain your data so you don't loose anything. Sick of having to manually provide your software to clients with every single update you make? Easily connect all of your clients directly to the cloud! We keep all of your files categorized and organized, synchronously!</p>
 
@@ -16,7 +14,6 @@
 
 ### Table of Contents:
 - [gtm-quickshare](#gtm-quickshare)
-    - [ATTENTION: At this time we are upgrading our view engine, you may experience slow downs or crashes during this migration process.](#attention-at-this-time-we-are-upgrading-our-view-engine-you-may-experience-slow-downs-or-crashes-during-this-migration-process)
     - [Introduction](#introduction)
     - [Disclaimer](#disclaimer)
     - [GTM QuickShare Documentation](#gtm-quickshare-documentation)
