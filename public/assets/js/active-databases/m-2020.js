@@ -1,5 +1,5 @@
 // Only execute script if it matches the URL.
-if (window.location.href.indexOf('http://localhost:3000/m-2020') != -1) {
+if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') != -1) {
 
     // Define Fire Config Object.
     let fireConfig = {
