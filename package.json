@@ -1,6 +1,6 @@
 {
   "name": "gtm-quickshare",
-  "version": "1.0.0",
+  "version": "V1.0.0-LIVE-T",
   "description": "![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/appPreview.gif?raw=true][preview]",
   "main": "server.js",
   "dependencies": {
@@ -22,5 +22,5 @@
   "bugs": {
     "url": "https://github.com/IAmShawn98/gtm-quickshare/issues"
   },
-  "homepage": "https://github.com/IAmShawn98/gtm-quickshare#readme"
+  "homepage": "https://gtm-quickshare.herokuapp.com/"
 }

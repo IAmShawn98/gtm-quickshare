@@ -44,7 +44,7 @@
 ### Navigating to GTM QuickShare.
 The first and most obvious step in understanding GTM QuickShare is actually using it.
 
-1. Click <a href="https://iamshawn98.github.io/gtm-quickshare/index.html">HERE</a> to open GTM QuickShare.
+1. Click <a href="https://gtm-quickshare.herokuapp.com/">HERE</a> to open GTM QuickShare.
    * GTM QuickShare only supports modern web browsers such as: <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>, <a href="https://www.google.com/chrome/">Google Chrome</a>, or <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.
    So if QuickShare opens in Internet Explorer, copy the link, and re-open it in one of the recommended
    browsers, otherwise it will not work.
