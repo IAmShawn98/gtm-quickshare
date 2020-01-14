@@ -1,8 +1,8 @@
 # gtm-quickshare
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/appPreview.gif?raw=true)][preview]
+![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/appPreview.gif?raw=true][preview]
 
-[preview]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/appPreview.gif?raw=true "Logo Title Text 2"
+[preview]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/appPreview.gif?raw=true "Logo Title Text 2"
 
 ### ATTENTION: At this time we are upgrading our view engine, you may experience slow downs or crashes during this migration process.
 
@@ -57,9 +57,9 @@ The 'QuickShare Portal' is a convenient browser Extension that allows you to acc
 2. Download QuickShare in the event of a server outage.
 3. Access our Github anytime to read recent change logs, commits, etc.
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo]
+![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/featurette/portal-mini.png?raw=true][logo]
 
-[logo]: https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png "Logo Title Text 2"
+[logo]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/featurette/portal-mini.png?raw=true "Logo Title Text 2"
 *Image of the QuickShare Portal*
 
 ### Installing the QuickShare Portal
@@ -77,9 +77,9 @@ The 'QuickShare Portal' is a convenient browser Extension that allows you to acc
    That will run the QuickShare Portal so you can use it. If you did the installation correctly, you should get
    the image below:
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo2]
+![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/portal_browser.png?raw=true][logo2]
 
-[logo2]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/portal_browser.png?raw=true "Logo Title Text 2"
+[logo2]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/portal_browser.png?raw=true "Logo Title Text 2"
 
 ### Shortcut Didn't Work Right? ---> The 'Slightly' Longer Way
 1. Open Google Chrome in a new tab, and in the upper right corner of the screen, click on the three dots and click on 'Settings'.
@@ -113,9 +113,9 @@ Please Note: *These instructions are also listed below.*
 3. Click on one of the folders to bring you back here or do the shortcut 'CTRL + R'.
 4. Then enter the name of the folder into the box below. The Sync Table should then populate with your folder data.
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo3]
+![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/table_example.png?raw=true)][logo3]
 
-[logo3]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/table_example.png?raw=true "Logo Title Text 2"
+[logo3]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/table_example.png?raw=true "Logo Title Text 2"
 *Example of a populated Sync Table from folder data*
 
 ### Creating New Folders
@@ -141,9 +141,9 @@ whatever it is your doing with them. Try it! Look for a file in the table and se
 You will notice the table will remove files that don't match your search criteria but will
 show multiple files if they share farmiliar characteristics.
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo4]
+![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/table_filter_example.gif?raw=true][logo4]
 
-[logo4]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/table_filter_example.gif?raw=true "Logo Title Text 2"
+[logo4]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/table_filter_example.gif?raw=true "Logo Title Text 2"
 *This is a demo of file searching.*
 
 ### Downloading Files
