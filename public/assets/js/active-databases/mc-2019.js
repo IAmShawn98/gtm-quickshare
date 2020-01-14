@@ -1,6 +1,5 @@
 // Only execute script if it matches the URL.
 if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/mc2019') != -1) {
-
     // Define Fire Config Object.
     let fireConfig = {
         apiKey: "AIzaSyCILwIcgT_tFnH7wUIK1XwfUs3uKt1WMa0",
