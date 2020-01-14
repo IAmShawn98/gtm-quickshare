@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{!-- Required Meta Tags --}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- SEO Meta Data -->
+    <meta name="Author" content="Shawn Luther">
+    <meta name="Description"
+        content="GTM Quickshare is an internal file and workbook repository for Global Tax Management. We provide an easy space to host, share, and manage your tax software." />
+    <meta name="Keywords"
+        content="global tax management, gtm, quickshare, excel, macro, workbook, documentation, software, file, folder, shawn luther" />
+
+    <!-- Google Site Verification -->
+    {{!-- TODO: Grab new site verification from web masters --}}
+
+    {{!-- Favicon --}}
+    <link rel="icon" href="/assets/images/icons/fave.ico" type="image/x-icon" />
+
+    <!-- MDBootstrap Datatables  -->
+    <link href="/assets/styles/datatables.min.css" rel="stylesheet">
+    {{!-- Font Awesome --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    {{!-- Animate CSS --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    {{!-- Google Font (Global) --}}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    {{!-- Google Font (Navbar Brand) --}}
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    {{!-- Bootstrap Core CSS --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    {{!-- Material Design Bootstrap --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+    {{!-- Custom CSS --}}
+    <link href="/assets/styles/styles.css" rel="stylesheet">
+
+    {{!-- Document Title --}}
+    <title>GTM QuickShare</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+
+    <!-- Firebase DB -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+    {{!-- Firebase Storage Bucket --}}
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+</head>
+
+<body class="animated fadeIn fast">
+
+    {{{body}}}
+
+    {{!-- jQuery --}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {{!-- Bootstrap Tooltips --}}
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    {{!-- Bootstrap Core JavaScript --}}
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    {{!-- MDB Core JavaScript --}}
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
+    {{!-- Scroll Behavior JS --}}
+    <script type="text/javascript" src="/assets/js/scrollBehavior.js">
+    </script>
+    <!-- MDBootstrap Datatables  -->
+    <script type="text/javascript" src="/assets/js/datatables.min.js"></script>
+
+    {{!-- Active Databases: --}}
+    <script type="text/javascript" src="/assets/js/active-databases/mc-2019.js"></script>
+    <script type="text/javascript" src="/assets/js/active-databases/m-2020.js"></script>
+
+    {{!-- Upload Autofill --}}
+    <script type="text/javascript" src="/assets/js/fBrowserAutoFill.js"></script>
+
+    {{!-- Notify JS --}}
+    <script src="../../assets/js/notify.js"></script>
+
+    <script type="text/javascript">
+        // Data Table Properties.
+        $(document).ready(function () {
+            $('#dtBasicExample').DataTable({
+                "scrollY": "400px",
+                "scrollCollapse": true,
+                "paging": true,
+                pageLength: 5,
+                lengthMenu: [5, 10, 15, 20]
+            });
+            $('.dataTables_length').addClass('bs-select');
+        });
+
+        // Browser Compatibility Checker (Basically An IE Sniffer).
+        const userAgent = window.navigator.userAgent; // Grab window data containing IE engine version.
+        const DetectIE = document.getElementById("IEDetection"); // DOM for HTML notice for failed tests.
+
+        // Detect IE.
+        let IE_Engines =
+            userAgent.indexOf("Trident/5.0") > -1 ||
+            userAgent.indexOf("Trident/6.0") > -1 ||
+            userAgent.indexOf("Trident/7.0") > -1;
+
+        // If the window matches any incompatible versions of IE, warn the user.
+        if (IE_Engines) {
+            DetectIE.style.display = "block"; // Show Warning.
+            console.log("❌ Compatibility Check: The browser you are using has failed the test. Please try a modern browser.");
+        } else {
+            // If the window meets the requirements, give them a pass.
+            console.log("✔️ Compatibility Check: The user is on a compatible browser!");
+        }
+    </script>
+</body>
+
+</html>

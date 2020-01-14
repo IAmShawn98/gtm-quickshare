@@ -1,0 +1,279 @@
+{{!-- Navbar Container --}}
+<nav id="home" class="navbar navbar-expand-lg navbar-info bg-white">
+  {{!-- Navbar Brand --}}
+  <a class="navbar-brand" href="/">
+    {{!-- The QuickShare "Logo" --}}
+    <b class="font-weight-bold">Quick</b>
+    <i class="fa fa-share-alt" aria-hidden="true"></i>
+    <b class="font-weight-bold text-success">Share</b>
+  </a>
+
+  {{!-- Collapse Button --}}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown">
+    {{!-- Hamburger Icon --}}
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  {{!-- Collapsible Content --}}
+  <div class="collapse navbar-collapse" id="navbarDropdown">
+
+    {{!-- Navigation Links: --}}
+    <ul class="navbar-nav mr-auto">
+      {{!-- Homepage Route --}}
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      {{!-- About Section (Scroll) --}}
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+
+      {{!-- File Repositories (Dropdown Menu) --}}
+      <li class="nav-item dropdown text-center">
+        {{!-- Dropdown Button --}}
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">File Repositories</a>
+        {{!-- Dropdown Content Container --}}
+        <div class="dropdown-menu text-center">
+          <h6 class="dropdown-header text-white bg-success">
+            {{!-- Excel Macros --}}
+            <i class="fa fa-file-excel" aria-hidden="true"></i> Excel Macros</h6>
+          <div class="dropdown-divider"></div>
+          {{!-- 2019 Collection --}}
+          <a class="dropdown-item p-0" href="/mc2019">2019 Collection</a>
+          {{!-- 2020 Collection --}}
+          <a class="dropdown-item p-0" href="/m-2020">2020 Collection</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- IE Support Notice -->
+<div style="display: none;" class="container-fluid" id="IEDetection">
+  <div class="row">
+    <div class="col-md-12 m-0 p-0">
+      <div style="border-radius: 0% !important;" class="alert alert-warning alert-dismissible fade show m-0">
+        <strong>
+          <i class="fas fa-exclamation-triangle"></i> GTM QuickShare Doesn't Support Internet Explorer.
+        </strong>
+        We recommend using a modern browser such as:
+        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>,
+        <a href="https://chrome.google.com/">Google Chrome</a>, or
+        <a href="https://mozilla.org/firefox/">Firefox</a>.
+
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- Image Slide Wrapper --}}
+<div id="imgSlider" class="carousel slide carousel-fade" data-ride="carousel">
+  <!-- Indicators (Arrows; Left/Right)-->
+  <ol class="carousel-indicators">
+    <li data-target="#imgSlider" data-slide-to="0" class="active"></li>
+    <li data-target="#imgSlider" data-slide-to="1"></li>
+    <li data-target="#imgSlider" data-slide-to="2"></li>
+  </ol>
+  {{!-- Slide Images --}}
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="view">
+        <img class="slide-img d-block w-100" src="../assets/images/Carousel/stock1.gif" alt="First slide">
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        {{!-- Quote Cloud Overlay --}}
+        <div class="row">
+          <img id="cloudStock" src="../assets/images/Carousel/Cloud.png" alt="Cloud.png">
+        </div>
+        <a class="display-2" href="/">
+          {{!-- The QuickShare "Logo" --}}
+          <b class="font-weight-bold">Quick</b>
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+          <b class="font-weight-bold text-success">Share</b>
+        </a>
+        <p id="img-slide-title">The Tax Software Repository</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="view">
+        <img class="slide-img d-block w-100" src="../assets/images/Carousel/stock2.gif" alt="First slide">
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <a class="display-2" href="/">
+          {{!-- The QuickShare "Logo" --}}
+          <b class="font-weight-bold">Quick</b>
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+          <b class="font-weight-bold text-success">Share</b>
+        </a>
+        <p id="img-slide-title">Share Files With Your Team Synchronously</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="view">
+        <img class="slide-img d-block w-100" src="../assets/images/Carousel/stock3.gif" alt="First slide">
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <a class="display-2" href="/">
+          {{!-- The QuickShare "Logo" --}}
+          <b class="font-weight-bold">Quick</b>
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+          <b class="font-weight-bold text-success">Share</b>
+        </a>
+        <p id="img-slide-title">Connect Your Devices to the Data You Need</p>
+      </div>
+    </div>
+  </div>
+  {{!-- Slide Controls --}}
+  <a class="carousel-control-prev" href="#imgSlider" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#imgSlider" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- 'Why QuickShare?' Featurettes -->
+<div id="about" class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="text-info">Why 'GTM QuickShare'?</h1>
+    </div>
+  </div>
+  <hr class="featurette-divider">
+  <!-- Paragraph 1 -->
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading text-primary">
+        <span class="text-success">We Synchronize Your Team!</span>
+      </h2>
+      <p class="lead text-primary">
+        GTM QuickShare is an open source file repository that specializes in maintaining tax software.
+        Have over a dozen workbooks containing Excel Macros or versioned software? We provide the
+        storage and space you need to host, seperate, and maintain your data so you don't loose
+        anything. Sick of having to manually provide your software to clients with every single
+        update you make? Easily connect all of your clients directly to the cloud! We keep all of your
+        files categorized and organized, synchronously!
+      </p>
+    </div>
+    <!-- Featurette Image 1 -->
+    <div class="col-md-5">
+      <img class="img-fluid img-thumbnail mx-auto" src="../assets/images/featurette/team.jpg" alt="team.jpg" width="500"
+        height="500">
+    </div>
+  </div>
+  <hr class="featurette-divider">
+  <!-- Paragraph 2 -->
+  <div class="row featurette">
+    <!-- Featurette Image 2 -->
+    <div class="col-md-5">
+      <img class="img-fluid img-thumbnail mx-auto" src="../assets/images/featurette/gtmSpirit.png" alt="gtmSpirit.png"
+        width="500" height="500">
+    </div>
+    <div class="col-md-7">
+      <h2 class="featurette-heading text-success">
+        <span class="text-primary">
+          It's Stupid Easy.
+        </span>
+      </h2>
+      <p class="lead text-success">
+        When we say stupid, we mean it! Want a file managed by version? Easily parition your own unique
+        space on our server to host your workbooks and files. No sign ups, no bull, get what you want done in an instant
+        with zero time spent setting up and configuring complicated software. You don't need to worry about special
+        permissions and other complicated jargon you could care less about, and more time hosting, updating, and
+        using the software you need. It's really that simple.
+      </p>
+    </div>
+  </div>
+  <hr class="featurette-divider">
+  <!-- Paragraph 3 -->
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading text-primary">
+        <span class="text-success">
+          Are You Sick of Seeing This? <i class="fa fa-arrow-right"></i>
+        </span>
+      </h2>
+      <p class="lead text-primary">
+        We know how important it is that your automation
+        tools run as quick and efficiently as possible.
+        We check, backup, and test our files daily to
+        ensure the chances of annoying runtime errors
+        or outdated workbooks happen less. This way,
+        you can spend less time inquiring about
+        broken Macros and more
+        time using them.
+      </p>
+    </div>
+    <!-- Featurette Image 3 -->
+    <div class="col-md-5">
+      <img class="img-fluid img-thumbnail mx-auto" src="../assets/images/featurette/vbaErr.png" alt="vbaErr.png"
+        width="500" height="500">
+    </div>
+    <hr class="featurette-divider">
+  </div>
+  <hr class="featurette-divider">
+  <!-- Paragraph 4 -->
+  <div class="row featurette mt-3">
+    <!-- Featurette Image 4 -->
+    <div class="col-md-5">
+      <img class="img-fluid img-thumbnail mx-auto" src="../assets/images/featurette/gtm-cloud.png" alt="gtm-cloud.png"
+        width="400" height="500">
+    </div>
+    <div class="col-md-7">
+      <h2 class="featurette-heading text-success">
+        <span class="text-primary">
+          QuickShare Feeds Your Laziness!
+        </span>
+      </h2>
+      <p class="lead text-success">
+        We do virtually all of the hard parts for you. We have upload shortcuts and smart autofill that
+        automatically detects the name of your file being uploaded, and uses that data to push to our
+        servers. You have complete control however, and can choose a custom name for each of your
+        files. You can even choose to host your file on another server and share it on
+        GTM QuickShare.
+      </p>
+    </div>
+  </div>
+  <!-- Paragraph 5 -->
+  <div class="row featurette mt-5">
+    <div class="col-md-7">
+      <h2 class="featurette-heading text-primary">
+        <span class="text-success">
+          Get the QuickShare Portal <i class="fa fa-arrow-right"></i>
+        </span>
+      </h2>
+      <p class="lead text-primary">
+        The QuickShare Portal allows you to easily find GTM QuickShare whenever you need it. Just two clicks
+        and you're close to the files you need. Click <a class="font-weight-bold"
+          href="https://firebasestorage.googleapis.com/v0/b/gtm-slot1.appspot.com/o/gtm-quickshare-portal.rar?alt=media&token=b2dff59c-43b6-4745-bd06-ba617fcebb70"><u>here</u>
+        </a> to download QuickShare Portal V1.0.0!
+      </p>
+    </div>
+    <!-- Featurette Image 5 -->
+    <div class="col-md-5">
+      <img class="img-fluid img-thumbnail mx-auto" src="../assets/images/featurette/portal-mini.png"
+        alt="portal-mini.png" width="500" height="500">
+    </div>
+    <hr class="featurette-divider">
+  </div>
+</div>
+{{!-- Sticky Top Scroller --}}
+{{> topScroll}}
+
+<!-- Site Footer -->
+<footer class="border-top mt-5 p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-4">
+        <p class="lead">&copy; Global Tax Management 2020</p>
+      </div>
+    </div>
+  </div>
+</footer>

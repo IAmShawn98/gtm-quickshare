@@ -4,8 +4,10 @@
 
 [preview]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/appPreview.gif?raw=true "Logo Title Text 2"
 
+### ATTENTION: At this time we are upgrading our view engine, you may experience slow downs or crashes during this migration process.
+
 ### Introduction
-<p>GTM QuickShare is an internal file repository built to house your teams Excel Macros, Workbooks, user guides, documentation, and any piece of software that needs constant attention. The days of repetitively sending group emails to your colleagues about minor updates to your tax software are over. The QuickShare repository makes accessing files as easy as clicking a download link. We keep all of your files categorized and organized, synchronously!</p>
+<p>GTM QuickShare is an open source file repository that specializes in maintaining tax software. Have over a dozen workbooks containing Excel Macros or versioned software? We provide the storage and space you need to host, seperate, and maintain your data so you don't loose anything. Sick of having to manually provide your software to clients with every single update you make? Easily connect all of your clients directly to the cloud! We keep all of your files categorized and organized, synchronously!</p>
 
 ### Disclaimer
 *<p>GTM QuickShare is an open-source file repository created for comapnywide internal use ONLY. We currently do not plan to support realtime database requests outside of the official storage slots that house our files. We do not hold any sensitive data and backup our files regularly. Created by Shawn Luther for Global Tax Management.</p>*
@@ -14,6 +16,7 @@
 
 ### Table of Contents:
 - [gtm-quickshare](#gtm-quickshare)
+    - [ATTENTION: At this time we are upgrading our view engine, you may experience slow downs or crashes during this migration process.](#attention-at-this-time-we-are-upgrading-our-view-engine-you-may-experience-slow-downs-or-crashes-during-this-migration-process)
     - [Introduction](#introduction)
     - [Disclaimer](#disclaimer)
     - [GTM QuickShare Documentation](#gtm-quickshare-documentation)
@@ -34,6 +37,7 @@
     - [Uploading Files](#uploading-files)
   - [Change Logs](#change-logs)
     - [GTM QuickShare V1.0.0-LIVE-T](#gtm-quickshare-v100-live-t)
+    - [GTM QuickShare V1.0.0-LIVE-T](#gtm-quickshare-v100-live-t-1)
 <hr />
 
 ## Getting Started
@@ -170,7 +174,24 @@ file has finished uploading, then do Shift + P to PUSH your file to the Sync Tab
 Congrats, you're now a QuickShare PRO!
 
 ## Change Logs
-The QuickShare changelogs represent the most recent list of bug fixes, known issues, and features that QuickShare has to offer.
+View the latest updates for GTM QuickShare.
+
+### GTM QuickShare V1.0.0-LIVE-T
+* QuickShare Version Updated On 1.14.2020
+  1. **Version Update**:
+  * Migrated GTM QuickShare master source to a new view engine.
+  1. Bugs Fixed:
+   * Fixed a bug causing files to be shown as 'Undefined' when leaving the folder select prompt blank.
+   * When leaving the folder select prompt blank, you will no longer see an invisible folder name.
+   * Date added no longer contains the current date prior to pushing files.
+   * Removed the bugged overflow border from 'All Folders'.
+   * The 'About' section no longer appears under any of the current data collections.
+   * The 'About' link actually works now, smooth scrolling you to the about content.
+   * Fixed a glitch causing the 'scroll back to top' button from not rendering.
+  2. **Features & Updates**:
+   * All datatables now contain file pagination.
+   * Migrated source code to Node Express using the Handlebars view engine.
+   * Migrated from Bootstrap to Material Design Bootstrap.
 
 ### GTM QuickShare V1.0.0-LIVE-T
 * QuickShare Version Updated On 7.25.2019
