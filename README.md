@@ -5,7 +5,7 @@
 [preview]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/appPreview.gif?raw=true "Logo Title Text 2"
 
 ### Introduction
-<p>Whether you're a developer, client, or somewhere in between, GTM QuickShare makes it easy to both upload and download your files. When you select a file to upload, our smart autofill tech grabs the details of your files for you, allowing you to get your files up easier, and faster. Then, files are a few clicks away, by entering a client folder, you can easily receive the files you need instantly, anytime and anywhere!</p>
+<p>GTM QuickShare is a file repository that specializes in maintaining your teams versioned tax software. We provide space to store and manage your files, bridging the gap between you and your clients. We keep all of your files categorized and organized, synchronously!</p>
 
 ### Disclaimer
 *<p>GTM QuickShare is an open-source file repository created for comapnywide internal use ONLY. We currently do not plan to support realtime database requests outside of the official storage slots that house our files. We do not hold any sensitive data and backup our files regularly. Created by Shawn Luther for Global Tax Management.</p>*
