@@ -250,7 +250,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                 if (fPath == "" || " " || null) {
                     // Loop through and populate the 'All Folders' tab with each folder name.
                     for (let i = 0; i < key.length; ++i) {
-                        let buttons = $('<a href="http://localhost:3000/FireDB/"><button style="font-size: 150%; margin-top: 10px; width: 100%; height: 50px;"><i class="fa fa-folder text-warning float-left" aria-hidden="true"></i> <b class="text-primary">' + key + '</b></button><br />')
+                        let buttons = $('<a href="https://gtm-quickshare.herokuapp.com/" ' + fireConfig.projectId + '"><button style="font-size: 150%; margin-top: 10px; width: 100%; height: 50px;"><i class="fa fa-folder text-warning float-left" aria-hidden="true"></i> <b class="text-primary">' + key + '</b></button><br />')
                         buttons.appendTo('#AllFolders');
                         break;
                     }
