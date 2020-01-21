@@ -15,7 +15,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
 
     // Let the user pick the folder they want to navigate to.
     // This can also be used to let them create new folders.
-    let fPath = prompt("Welcome to the " + fireConfig.projectId + " collection.\n******************************************************** \n How This Works:\n 1.) Leave the box blank to pull up a list of all folders.\n 2.) Type an existing folder name to view it.\n 3.) Create a new folder by typing the desired folder name into the box.\n\nRecommendation: Keep all folder names unique to avoid confusion.");
+    let fPath = prompt("Welcome to the " + fireConfig.projectId + " collection.\n*************************************************************************\n                                 ---- Folder Navigation ---- \n How This Works:\n 1.) Leave the box blank to pull up a list of all folders.\n 2.) Type an existing folder name to view it.\n 3.) Create a new folder by typing the desired folder name into the box.\n\nRecommendation: Keep all folder names unique to avoid confusion.");
 
     // Initialize DB Object.
     firebase.initializeApp(fireConfig);
