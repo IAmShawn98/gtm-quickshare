@@ -1,5 +1,5 @@
 // Only execute script if it matches the URL.
-if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') != -1) {
+if (window.location.href.indexOf('localhost:3000/m-2020') != -1) {
 
     // Define Fire Config Object.
     let fireConfig = {
@@ -15,7 +15,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
 
     // Let the user pick the folder they want to navigate to.
     // This can also be used to let them create new folders.
-    let fPath = prompt("Type the name of the folder you'd like to access for " + fireConfig.projectId + ". If you would like to create a new one, simply type any folder name you desire into the box below. You can view all folders by leaving the box blank and hitting 'OK' to continue.");
+    let fPath = prompt("Welcome to the " + fireConfig.projectId + " collection.\n******************************************************** \n How This Works:\n 1.) Leave the box blank to pull up a list of all folders.\n 2.) Type an existing folder name to view it.\n 3.) Create a new folder by typing the desired folder name into the box.\n\nPlease Note: We recommend making each folder name unique.");
 
     // Initialize DB Object.
     firebase.initializeApp(fireConfig);
