@@ -201,7 +201,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                     // Show All Folders.
                     $(".fa-cog").click();
                     $("#tabFolders").click();
-                    $("#dataPopulate").hide()
+                    $("#dataPopulate").hide();
                 }
                 // Stores the unique key generated for each file.
                 const key = childSnapshot.key;
@@ -293,36 +293,36 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
 
     // Shortcut to 'Data Options'.
     $(this).on('keypress', function (event) {
-        var keyU = 68; // 'D' Key.
+        let keyU = 68; // 'D' Key.
         if (event.keyCode == keyU) {
             $(".fa-cog").click();
         }
-    })
+    });
 
     // Shortcut to 'Upload Files'.
     $(this).on('keypress', function (event) {
-        var keyU = 85; // 'U' Key.
+        let keyU = 85; // 'U' Key.
         if (event.keyCode == keyU) {
             $("#fBrowser").click();
         }
-    })
+    });
 
     // Shortcut to 'Push File'.
     $(this).on('keypress', function (event) {
-        var keyU = 80; // 'P' Key.
+        let keyU = 80; // 'P' Key.
         if (event.keyCode == keyU) {
             $("#btnSubmit").click();
             setTimeout(() => {
                 window.location.reload();
             }, 10);
         }
-    })
+    });
 
     // Shortcut to 'Shortcuts List'.
     $(this).on('keypress', function (event) {
-        var keyU = 83; // 'S' Key.
+        let keyU = 83; // 'S' Key.
         if (event.keyCode == keyU) {
             $("#ShortcutMenu").click();
         }
-    })
+    });
 }

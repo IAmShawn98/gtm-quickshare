@@ -4,9 +4,9 @@ $('input[type=file]').change(() => {
     let newDate = new Date();
 
     // Month, Date, and Year (MM:DD:YY) Format With Zeros.
-    var mm = newDate.getMonth() + 1;
-    var dd = newDate.getDate();
-    var yyyy = newDate.getFullYear();
+    let mm = newDate.getMonth() + 1;
+    let dd = newDate.getDate();
+    let yyyy = newDate.getFullYear();
 
     // Listen to the Browser For Later Population.
     const FileBrowser = document.getElementById("FileBrowser");
