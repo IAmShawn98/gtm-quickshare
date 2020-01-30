@@ -1,5 +1,5 @@
 // Only execute script if it matches the URL.
-if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') != -1) {
+if (window.location.href.indexOf('localhost:3000/m-2020') != -1) {
 
     // Define Fire Config Object.
     let fireConfig = {
@@ -122,10 +122,10 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
         e.preventDefault();
 
         // Gather Input Data Values.
-        const fName = document.getElementById("fName").value;
-        const fLink = document.getElementById("fLink").value;
-        const fSize = document.getElementById("fSize").value;
-        const fDate = document.getElementById("fDate").value;
+        let fName = document.getElementById("fName").value;
+        let fLink = document.getElementById("fLink").value;
+        let fSize = document.getElementById("fSize").value;
+        let fDate = document.getElementById("fDate").value;
 
         // Push Captures into a save function.
         saveFile(fName, fLink, fDate, fSize);
@@ -142,7 +142,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
     // Push data to the DB we are writing to.
     function saveFile(fName, fLink, fDate, fSize) {
         // Push the saved data into the database: 'gtm-slot1'.
-        const formData = FireDB.push();
+        let formData = FireDB.push();
         formData.set({
             fName: fName,
             fLink: fLink,
@@ -156,10 +156,10 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
         e.preventDefault(); // Prevents the usual submit functionality during a save.
 
         // Global variables used to put our user info into for later table population.
-        const fName = getInputVal('fName'); // File Name.
-        const fLink = getInputVal('fLink'); // File Link.
-        const fDate = getInputVal('fDate'); // File Author.
-        const fSize = getInputVal('fSize'); // File Size.
+        let fName = getInputVal('fName'); // File Name.
+        let fLink = getInputVal('fLink'); // File Link.
+        let fDate = getInputVal('fDate'); // File Author.
+        let fSize = getInputVal('fSize'); // File Size.
 
         // Push file data into a save.
         saveFile(fName, fLink, fDate, fSize);
@@ -172,7 +172,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
 
     // Save submit data into their respective variables.
     function saveFile(fName, fLink, fDate, fSize) {
-        const newMessageRef = FireDB.push();
+        let newMessageRef = FireDB.push();
         newMessageRef.set({
             fName: fName,
             fLink: fLink,
@@ -181,7 +181,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
         });
     }
     // Populate the Sync Table with each new entry in order by key.
-    const userDataRef = firebase.database().ref(fireConfig.projectId + "/" + fPath).orderByKey();
+    let userDataRef = firebase.database().ref(fireConfig.projectId + "/" + fPath).orderByKey();
     userDataRef.once('value')
         .then(function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
@@ -204,15 +204,15 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                     $("#dataPopulate").hide();
                 }
                 // Stores the unique key generated for each file.
-                const key = childSnapshot.key;
+                let key = childSnapshot.key;
 
-                const fName = childSnapshot.val().fName; // File Name.
-                const fLink = childSnapshot.val().fLink; // File Link.
-                const fSize = childSnapshot.val().fSize // File Size.
-                const fDate = childSnapshot.val().fDate; // File Date.
+                let fName = childSnapshot.val().fName; // File Name.
+                let fLink = childSnapshot.val().fLink; // File Link.
+                let fSize = childSnapshot.val().fSize // File Size.
+                let fDate = childSnapshot.val().fDate; // File Date.
 
                 // Format our table into a datatable.
-                const table = $('#dataPopulation').DataTable({
+                let table = $('#dataPopulation').DataTable({
                     lengthMenu: [4, 8, 16, 25, 50, 80, 100],
                     "scrollY": "350px",
                     "paging": true,
@@ -221,7 +221,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                 // *******************************************************************SYNC TABLE**********************************************************************************************************************************************
                 let dataSet = [
                     // File Name.
-                    ["<td>" + "<a  class='text-info' href='" + fLink + "'>" + fName + "</a></td>"],
+                    ["<td>" + "<a class='text-info' href='" + fLink + "'><span class='domFName'>" + fName + "</span></a></td>"],
                     [
                         // File Size.
                         ['<td>' + fSize + '</td>']
@@ -235,6 +235,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                         '<td>' +
                         // Delete File.
                         '<i style="cursor: pointer;" class="fa fa-trash text-danger p-3" aria-hidden="true"></i>' +
+                        '<i style="cursor: pointer;" class="fa fa-edit text-warning p-3" aria-hidden="true"></i>' +
                         '</td>'
                     ],
                     [
@@ -257,13 +258,32 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                 }
                 // Deletes a single row in the table.
                 $(".fa-trash").on('click', function () {
-                    // alert(key);
                     for (let k = 0; k < key.length; ++k) {
                         // Remove child from the database.
                         FireDB.child(key).remove();
                         // Remove this row from the DB to reflect the current state of the DB.
                         $(this).parents("tr").remove();
                         // Stop looping once key is removed.
+                        if (key == removed()) {
+                            break;
+                        }
+                    }
+                });
+                // Edits a single row in the table.
+                $(".fa-edit").on('click', function () {
+                    for (let l = 0; l < key.length; ++l) {
+                        // Modify fName prompt.
+                        let mName = prompt("Type a new name for '" + fName + "' in the box below and click 'OK'.");
+                        // Key we want to modify.
+                        let FireDB = firebase.database().ref("m-2020/" + fPath + "/" + key);
+                        // Change data based on prompt data.
+                        FireDB.update({
+                            fName: mName,
+                        });
+                        // Let the user know their file was changed.
+                        alert("Your file was successfully renamed '" + mName + "'.");
+                        window.location.reload();
+                        // Stop looping once key is modified.
                         if (key == removed()) {
                             break;
                         }
