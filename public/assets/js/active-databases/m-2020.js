@@ -1,5 +1,5 @@
 // Only execute script if it matches the URL.
-if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') != -1) {
+if (window.location.href.indexOf('localhost:3000/m-2020') != -1) {
 
     // Define Fire Config Object.
     let fireConfig = {
@@ -275,7 +275,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                         // Modify fName prompt.
                         let mName = prompt("Type a new name for '" + fName + "' in the box below and click 'OK'.");
                         // Key we want to modify.
-                        let FireDB = firebase.database().ref(fireConfig.projectId + fPath + "/" + key);
+                        let FireDB = firebase.database().ref(fireConfig.projectId + "/" + fPath + "/" + key);
                         // Change data based on prompt data.
                         FireDB.update({
                             fName: mName,
