@@ -1,5 +1,5 @@
 // Only execute script if it matches the URL.
-if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') != -1) {
+if (window.location.href.indexOf('localhost:3000/m-2020') != -1) {
 
     // Get the Current Date For the 'Date Added' Input Field.
     let newDate = new Date();
@@ -10,7 +10,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
     let yyyy = newDate.getFullYear();
     let h = (newDate.getHours() + 24) % 12 || 12;
     let i = (newDate.getMinutes() < 10 ? '0' : '') + newDate.getMinutes();
-    let ampm = (h >= 12) ? "PM" : "AM";
+    let ampm = (h >= 12) ? "AM" : "PM";
 
     // Populate the New Date Stamp to 'NewDate'.
     newDate = mm + '-' + dd + '-' + yyyy;
