@@ -252,9 +252,9 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                     [
                         '<td>' +
                         // Edit File.
-                        '<i style="cursor: pointer;" class="fa fa-edit text-warning p-3" aria-hidden="true"></i>' +
+                        '<i title="Edit File" style="cursor: pointer;" class="fa fa-edit text-warning p-3" aria-hidden="true"></i>' +
                         // Delete File.
-                        '<i style="cursor: pointer;" class="fa fa-times text-danger p-3" aria-hidden="true"></i>' +
+                        '<i title="Delete File" style="cursor: pointer;" class="fa fa-times text-danger p-3" aria-hidden="true"></i>' +
                         '</td>'
                     ],
                     [
