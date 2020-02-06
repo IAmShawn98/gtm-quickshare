@@ -1,5 +1,5 @@
 // Only execute script if it matches the URL.
-if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') != -1) {
+if (window.location.href.indexOf('localhost:3000/m-2020') != -1) {
 
     // Get the Current Date For the 'Date Added' Input Field.
     let newDate = new Date();
@@ -161,7 +161,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
         formData.set({
             fName: fName,
             fLink: fLink,
-            fDate: newDate + " At " + h + ":" + i + " " + ampm + " <i title='This file was updated from its original version.' class='fa fa-check text-white rounded-circle bg-primary animated fadeIn slow' aria-hidden='true'></i>",
+            fDate: newDate + " At " + h + ":" + i + " " + ampm + " <i title='This file was imported via file upload.' class='fa fa-check text-white rounded-circle bg-primary animated fadeIn slow' aria-hidden='true'></i>",
             fSize: fSize
         });
     }
@@ -191,7 +191,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
         newMessageRef.set({
             fName: fName,
             fLink: fLink,
-            fDate: newDate + " At " + h + ":" + i + " " + ampm + " <i title='' class='fa fa-check text-white rounded-circle bg-primary animated fadeIn slow' aria-hidden='true'></i>",
+            fDate: newDate + " At " + h + ":" + i + " " + ampm + " <i title='This file was imported via file upload.' class='fa fa-check text-white rounded-circle bg-primary animated fadeIn slow' aria-hidden='true'></i>",
             fSize: fSize
         });
     }
