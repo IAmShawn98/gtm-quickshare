@@ -1,5 +1,5 @@
 // Only execute script if it matches the URL.
-if (window.location.href.indexOf('localhost:3000/m-2020') != -1) {
+if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') != -1) {
 
     // Get the Current Date For the 'Date Added' Input Field.
     let newDate = new Date();
