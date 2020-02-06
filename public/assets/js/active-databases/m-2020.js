@@ -231,7 +231,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
 
                 // Format our table into a datatable.
                 let table = $('#dataPopulation').DataTable({
-                    lengthMenu: [4, 8, 16, 25, 50, 80, 100],
+                    lengthMenu: [4, 8, 20, 40, 80, 100],
                     "scrollY": "350px",
                     "paging": true,
                 });
