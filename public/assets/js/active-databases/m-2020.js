@@ -1,5 +1,20 @@
 // Only execute script if it matches the URL.
-if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') != -1) {
+if (window.location.href.indexOf('localhost:3000/m-2020') != -1) {
+
+    // Get the Current Date For the 'Date Added' Input Field.
+    let newDate = new Date();
+
+    // Month, Date, and Year (MM:DD:YY) Format With Zeros.
+    let mm = newDate.getMonth() + 1;
+    let dd = newDate.getDate();
+    let yyyy = newDate.getFullYear();
+    let h = newDate.getHours();
+    let i = newDate.getMinutes();
+    let ampm = (h >= 12) ? "PM" : "AM";
+
+    // Populate the New Date Stamp to 'NewDate'.
+    newDate = mm + '-' + dd + '-' + yyyy;
+    newDate = mm + '/' + dd + '/' + yyyy;
 
     // Define Fire Config Object.
     let fireConfig = {
@@ -146,7 +161,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
         formData.set({
             fName: fName,
             fLink: fLink,
-            fDate: fDate,
+            fDate: newDate + " At " + h + ":" + i + " " + ampm + " <i title='This file was updated from its original version.' class='fa fa-check text-white rounded-circle bg-primary animated fadeIn slow' aria-hidden='true'></i>",
             fSize: fSize
         });
     }
@@ -176,7 +191,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
         newMessageRef.set({
             fName: fName,
             fLink: fLink,
-            fDate: fDate,
+            fDate: newDate + " At " + h + ":" + i + " " + ampm + " <i title='' class='fa fa-check text-white rounded-circle bg-primary animated fadeIn slow' aria-hidden='true'></i>",
             fSize: fSize
         });
     }
@@ -276,12 +291,13 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                 $(".fa-edit").on('click', function () {
                     for (let l = 0; l < key.length; ++l) {
                         // Modify fName prompt.
-                        let mName = prompt("Type a new name for '" + fName + "' in the box below and click 'OK'.");
+                        let mName = prompt("Enter a new name for '" + fName + "' in the box below and click 'OK'.");
                         // Key we want to modify.
                         let FireDB = firebase.database().ref(fireConfig.projectId + "/" + fPath + "/" + key);
                         // Change data based on prompt data.
                         FireDB.update({
                             fName: mName,
+                            fDate: newDate + " At " + h + ":" + i + " " + ampm + " <i title='This file was updated from its original version.' class='fa fa-check text-white rounded-circle bg-warning animated fadeIn slow' aria-hidden='true'></i>"
                         });
                         // Let the user know their file was changed.
                         alert("Your file was successfully renamed '" + mName + "'.");
