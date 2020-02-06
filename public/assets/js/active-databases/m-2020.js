@@ -193,10 +193,13 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                     document.getElementById("SlotName").textContent = fPath;
                     document.getElementById("foldName").textContent = fPath;
                     $("#tabFolders").hide();
+
                 } else if (fPath == "") {
                     // Populate using hard coded root warning.
                     document.getElementById("SlotName").textContent = "All Folders (Root)";
                     document.getElementById("foldName").textContent = "All Folders (Root)";
+                    // Hide the form when no there is no folder selected.
+                    $("#UploadForm, #btnSubmit").hide();
 
                     // Show All Folders.
                     $(".fa-cog").click();
