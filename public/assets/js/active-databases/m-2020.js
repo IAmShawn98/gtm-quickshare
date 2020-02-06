@@ -1,5 +1,5 @@
 // Only execute script if it matches the URL.
-if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') != -1) {
+if (window.location.href.indexOf('localhost:3000/m-2020') != -1) {
 
     // Get the Current Date For the 'Date Added' Input Field.
     let newDate = new Date();
@@ -251,9 +251,10 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                     // Table Actions.
                     [
                         '<td>' +
-                        // Delete File.
-                        '<i style="cursor: pointer;" class="fa fa-trash text-danger p-3" aria-hidden="true"></i>' +
+                        // Edit File.
                         '<i style="cursor: pointer;" class="fa fa-edit text-warning p-3" aria-hidden="true"></i>' +
+                        // Delete File.
+                        '<i style="cursor: pointer;" class="fa fa-times text-danger p-3" aria-hidden="true"></i>' +
                         '</td>'
                     ],
                     [
@@ -275,7 +276,7 @@ if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/m-2020') 
                     }
                 }
                 // Deletes a single row in the table.
-                $(".fa-trash").on('click', function () {
+                $(".fa-times").on('click', function () {
                     for (let k = 0; k < key.length; ++k) {
                         // Remove child from the database.
                         FireDB.child(key).remove();
