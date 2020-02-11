@@ -11,7 +11,7 @@
     };
 
     // Only execute script if it matches the URL.
-    if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/s' + fireConfig.projectId) != -1) {
+    if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/' + fireConfig.projectId) != -1) {
 
         // Get the Current Date For the 'Date Added' Input Field.
         let newDate = new Date();
