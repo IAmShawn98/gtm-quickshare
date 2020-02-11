@@ -11,7 +11,7 @@
     };
 
     // Only execute script if it matches the URL.
-    if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/' + fireConfig.projectId) != -1) {
+    if (window.location.href.indexOf('localhost:3000/' + fireConfig.projectId) != -1) {
 
         // Get the Current Date For the 'Date Added' Input Field.
         let newDate = new Date();
@@ -22,7 +22,7 @@
         let yyyy = newDate.getFullYear();
         let h = (newDate.getHours() + 24) % 12 || 12;
         let i = (newDate.getMinutes() < 10 ? '0' : '') + newDate.getMinutes();
-        let ampm = (h >= 12) ? "AM" : "PM";
+        let ampm = (h >= 12) ? "PM" : "AM";
 
         // Populate the New Date Stamp to 'NewDate'.
         newDate = mm + '-' + dd + '-' + yyyy;
@@ -65,7 +65,6 @@
                         $("#btnSubmit").hide();
                         // Show processing button.
                         $("#btnProcessing").show();
-
                     } else if (percentage === 100) {
                         window.BeforeUnloadEvent = null;
                         // Pass download link into our textarea field.

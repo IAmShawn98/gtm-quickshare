@@ -1,5 +1,13 @@
 // AutoFill Form Fields | Populates the Uploaded File Name to the DOM Elements (Browser, File Name, File Date).
 $('input[type=file]').change(() => {
+    // Get the Current Date For the 'Date Added' Input Field.
+    let newDate = new Date();
+
+    // Month, Date, and Year (MM:DD:YY) Format With Zeros.
+    var mm = newDate.getMonth() + 1;
+    var dd = newDate.getDate();
+    var yyyy = newDate.getFullYear();
+
     // Listen to the Browser For Later Population.
     const FileBrowser = document.getElementById("FileBrowser");
     // Listen to the 'File Name' Field For later Population.
@@ -20,4 +28,11 @@ $('input[type=file]').change(() => {
 
     // Populate the File Name Input Field.
     fName.value = sFileName;
+
+    // Populate the New Date Stamp to 'NewDate'.
+    newDate = mm + '-' + dd + '-' + yyyy;
+    newDate = mm + '/' + dd + '/' + yyyy;
+
+    // Populate the 'Date Added' Input Field With Our Newly Created Date.
+    fDate.value = newDate;
 });
