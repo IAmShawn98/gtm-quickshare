@@ -103,11 +103,11 @@ That's it, you're now a QuickShare Pro!
   * Fixed a glitch that caused 'File Action' tooltips to not display.
   * Fixed an issue causing the date and time to display incorrect Am/Pm values.
   * Fixed a problem where the last updated date and time wouldn't show leading zeros and display incorrectly formatted times.
-* New Features:
-  * Users can now edit the name of their files.
   * Changed the icons for edit and delete to better fit the page.
   * 'Last Updated' dates now display when a file has been edited.
   * Created blue and yellow checkmarks to indicate when a file is new or has been updated.
+* New Features:
+  * Users can now edit the name of their files.
 
 #### gtm-quickshare Patch Notes | Released: 1.14.2020 | [V-1.0.0-Beta]:
 * Bug Fixes/Improvements:
