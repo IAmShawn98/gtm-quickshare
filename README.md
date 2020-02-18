@@ -1,208 +1,140 @@
 # gtm-quickshare
 
-![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/appPreview.gif?raw=true][preview]
+![preview](/public/assets/images/documentation-explanation/appPreview.gif)
 
-[preview]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/appPreview.gif?raw=true "Logo Title Text 2"
+## Introduction
+GTM QuickShare is a file repository that specializes in maintaining your teams versioned tax software. We provide space to store and manage your files, bridging the gap between you and your clients. We keep all of your files categorized and organized, synchronously!
 
-### Introduction
-<p>GTM QuickShare is a file repository that specializes in maintaining your teams versioned tax software. We provide space to store and manage your files, bridging the gap between you and your clients. We keep all of your files categorized and organized, synchronously!</p>
+## QuickShare Documentation
 
-### Disclaimer
-*<p>GTM QuickShare is an open-source file repository created for comapnywide internal use ONLY. We currently do not plan to support realtime database requests outside of the official storage slots that house our files. We do not hold any sensitive data and backup our files regularly. Created by Shawn Luther for Global Tax Management.</p>*
-
-### GTM QuickShare Documentation
-
-### Table of Contents:
 - [gtm-quickshare](#gtm-quickshare)
-    - [Introduction](#introduction)
-    - [Disclaimer](#disclaimer)
-    - [GTM QuickShare Documentation](#gtm-quickshare-documentation)
-    - [Table of Contents:](#table-of-contents)
-  - [Getting Started](#getting-started)
-    - [Navigating to GTM QuickShare.](#navigating-to-gtm-quickshare)
-    - [Explaining the QuickShare Portal](#explaining-the-quickshare-portal)
-    - [Installing the QuickShare Portal](#installing-the-quickshare-portal)
-    - [Install the QuickShare Portal (Google Chrome || The Short Way)](#install-the-quickshare-portal-google-chrome--the-short-way)
-    - [Shortcut Didn't Work Right? ---> The 'Slightly' Longer Way](#shortcut-didnt-work-right-----the-slightly-longer-way)
-  - [Understanding File Repositories](#understanding-file-repositories)
-    - [Navigating to Folders](#navigating-to-folders)
-    - [Creating New Folders](#creating-new-folders)
-    - [Understanding Sync Tables](#understanding-sync-tables)
-  - [Becoming A 'Pro'](#becoming-a-pro)
-    - [File Search](#file-search)
-    - [Downloading Files](#downloading-files)
-    - [Uploading Files](#uploading-files)
-  - [Change Logs](#change-logs)
-    - [GTM QuickShare V1.0.0-LIVE-T](#gtm-quickshare-v100-live-t)
-    - [GTM QuickShare V1.0.0-LIVE-T](#gtm-quickshare-v100-live-t-1)
-<hr />
+  - [Introduction](#introduction)
+  - [QuickShare Documentation](#quickshare-documentation)
+  - [Getting Started Guide](#getting-started-guide)
+    - [File Repositories](#file-repositories)
+      - [Navigating File Repositories](#navigating-file-repositories)
+    - [Reading, Writing, and Navigating Folders](#reading-writing-and-navigating-folders)
+      - [Show All Existing Folders](#show-all-existing-folders)
+      - [Navigating Folders](#navigating-folders)
+      - [Creating New Folders](#creating-new-folders)
+    - [Importing, Editing, and Deleting Files](#importing-editing-and-deleting-files)
+      - [Upload Files](#upload-files)
+      - [Editing and Deleting Files](#editing-and-deleting-files)
+    - [Accessing Key Shortcuts](#accessing-key-shortcuts)
+    - [Latest Release Notes:](#latest-release-notes)
+      - [gtm-quickshare Patch Notes | Released: 2.18.2020 | [V-1.1.0-Beta]:](#gtm-quickshare-patch-notes--released-2182020--v-110-beta)
+      - [gtm-quickshare Patch Notes | Released: 1.14.2020 | [V-1.0.0-Beta]:](#gtm-quickshare-patch-notes--released-1142020--v-100-beta)
+      - [gtm-quickshare Patch Notes | Released: 7.25.2019 | [V-1.0.0-Alpha]:](#gtm-quickshare-patch-notes--released-7252019--v-100-alpha)
 
-## Getting Started
-### Navigating to GTM QuickShare.
-The first and most obvious step in understanding GTM QuickShare is actually using it.
+## Getting Started Guide
+GTM QuickShare makes it easy to host and manage your tax automation software. We will go over all key features of QuickShare and how to use them. Learn all there is to know about our services by following this 'Getting Started' guide in order.
 
-1. Click <a href="https://gtm-quickshare.herokuapp.com/">HERE</a> to open GTM QuickShare.
-   * GTM QuickShare only supports modern web browsers such as: <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>, <a href="https://www.google.com/chrome/">Google Chrome</a>, or <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.
-   So if QuickShare opens in Internet Explorer, copy the link, and re-open it in one of the recommended
-   browsers, otherwise it will not work.
+### File Repositories
+GTM Quickshare gives your team space to maintain your files, these organized collections are called 'File Repositories'.
 
-### Explaining the QuickShare Portal
-This step isn't essential to use QuickShare, but is highly recommended.
-<br> <br>
-The 'QuickShare Portal' is a convenient browser Extension that allows you to access:
-1. GTM QuickShare without typing it in your address bar.
-2. Download QuickShare in the event of a server outage.
-3. Access our Github anytime to read recent change logs, commits, etc.
+#### Navigating File Repositories
+1. On <a href="https://gtm-quickshare.herokuapp.com/">gtm-quickshare.herokuapp.com</a> click on 'File Repositories' located on the right side of the navbar.
+2. Click on the latest collection available in the dropdown.
+3. That's it! You should see a prompt window pop up.
 
-![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/featurette/portal-mini.png?raw=true][logo]
+Now that you know where to find a collection, on the next part, let's talk about reading and writing data, as well as navigating folders within these collections.
 
-[logo]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/featurette/portal-mini.png?raw=true "Logo Title Text 2"
-*Image of the QuickShare Portal*
+### Reading, Writing, and Navigating Folders
+Inside each file repository collection is a group of folders. These folders contain files for all teams that participate in QuickShare.
+Currently, only TAS participates, so each folder represents different file collections specifically for TAS clients. We will be going over reading, writing, and navigating between these folders.
 
-### Installing the QuickShare Portal
-1. Using the same link you used to before, navigate to GTM QuickShare and scroll to the bottom of the home page.
-2. When you see 'Get the QuickShare Portal', read their instructions to download the files.
-3. Once you have the zip file containing the portal, save it somewhere on your computer.
-4. To install the QuickShare Portal, follow the instructions for your web browser below.
+#### Show All Existing Folders
+The first thing you want to do before proceeding to read files is view what currently exists in the collection. You can do this by
+leaving the prompt box empty and clicking 'OK'. This will bring up a listing of all known folders that currently exist. You can
+click on any of the folders to bring up the box prompt again or by doing the shortcut 'ctrl + r'.
 
-### Install the QuickShare Portal (Google Chrome || The Short Way)
-1. In a new tab, open up your web browser and in the address bar, type: '*chrome://extensions/*'.
-2. In the upper left hand corner of the web page, click on 'Load unpacked'.
-3. Once you do that, an explorer window will pop up asking you to find where you saved your downloaded QuickShare Portal Zip.
-4. When you navigate to it, hit the 'Select Folder' button and that's it! You now have the GTM QuickShare Portal!
-5. Once last thing though - In the upper right corner, click on the GTM Logo that was created in your browser.
-   That will run the QuickShare Portal so you can use it. If you did the installation correctly, you should get
-   the image below:
+If you don't see a box prompt, simply refresh the page or use the shortcut 'ctrl + r' and the prompt should appear.
 
-![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/portal_browser.png?raw=true][logo2]
+#### Navigating Folders
+In order to pull up all the files inside a folder, simply type the name of the folder into the prompt box, then click 'OK'.
+This will pull up that folders contents and allow you to see what is currently available for download. Its that simple.
 
-[logo2]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/portal_browser.png?raw=true "Logo Title Text 2"
+Using 'ctrl + r' or refreshing the page will then pull back up the prompt box, allowing you to enter other folders by explicitly providing the desired folder name in the prompt box.
 
-### Shortcut Didn't Work Right? ---> The 'Slightly' Longer Way
-1. Open Google Chrome in a new tab, and in the upper right corner of the screen, click on the three dots and click on 'Settings'.
-2. Once you're in settings, in the upper left corner, click on another '☰ Settings' button.
-3. A sideview should appear revealing many options. You wanna click on 'Extensions'.
-4. In the upper left hand corner of the web page, click on 'Load unpacked'.
-5. Once you do that, an explorer window will pop up asking you to find where you saved your downloaded QuickShare Portal Zip.
-6. When you navigate to it, hit the 'Select Folder' button and that's it! You now have the GTM QuickShare Portal!
-7. Once last thing though - In the upper right corner, click on the GTM Logo that was created in your browser.
-   That will run the QuickShare Portal so you can use it. If you did the installation correctly, you should get
-   the image below:
+#### Creating New Folders
+If you want to create a new folder, simply type a unique name for the folder you want to create into the box prompt.
+It's that simple, you have successfully created a new folder. At thid point, if you refresh the page with an empty
+folder, it will not be saved and your folder will get deleted.
 
-![[file://gtmfs01/TAS/GTM%20QuickShare%20Sources/gtm-quickshare/assets/home/images/Carousel/Cloud.png](https://iamshawn98.github.io/gtm-quickshare/assets/home/images/featurette/portal-mini.png)][logo2]
+Next we will upload a file to your newly created folder!
 
-[logo2]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/assets/home/images/readme/documentation-explanation/portal_browser.png?raw=true "Logo Title Text 2"
+### Importing, Editing, and Deleting Files
+When inside a folder you have complete control over the data in front of you. You can upload, edit, and delete files very easily.
+In this section we will go over uploading, editing, and deleting files from a folder.
 
-## Understanding File Repositories
-QuickShare File repositories are like big boxes containing file folders.
+#### Upload Files
+1. Navigate to the 'Data Options' menu by directly clicking on the (⚙️) icon labeled 'Data Options' or using the shortcut 'Shift + D'.
+2. A menu should pop up with a big blue button labeled 'Upload File', click on that. (Alternitively use the shortcut 'Shift + U').
+3. A file browser should pop up, search for the file you are looking to upload and click 'Open', or double click the file.
+4. At this point, your file has been pushed to site storage. Click on 'Push File' or use shortcut 'Shift + p' to finish importing.
 
-1. Open GTM QuickShare (Preferably by using the QuickShare Portal).
-2. In the upper left corner of the page, click on the 'File Repositories' dropdown button.
-3. Click on any of the available file repositories (right now there is only one).
-4. At this point, you should be sent to the file repository you clicked on
-   and instructions will appear on how to navigate and create folders.
+That's it! If your file successfully pushes to the table an alert box will let you know it was successful. When the upload process is complete, you will be taken back to the prompt box. In order to view your newly uploaded file, enter the name of the folder you
+created, your file should be there, ready to maintain and use. If you don't remember the name of your folder, it can be found
+by checking all existing folders (read 'Show All Existing Folders' for a refresher) on how to do that.
 
-Please Note: *These instructions are also listed below.*
+#### Editing and Deleting Files
+You've successfully created a folder, uploaded a file, aaannd messed it up (I know you didn't, just go with it). So, how can we fix this?
 
-### Navigating to Folders
-1. Type the name of the folder you want to view in the box below. If you don't know which folder you want, leave it blank and do #2.
-2. Navigate to 'Data Options ---> Data Folders' to view a list of all available folders.
-3. Click on one of the folders to bring you back here or do the shortcut 'CTRL + R'.
-4. Then enter the name of the folder into the box below. The Sync Table should then populate with your folder data.
+1. Under 'File Actions' click on the yellow edit icon.
+2. A box will pop up asking you to rename the file, enter any new desired name into the box below.
+3. You should get an edit success message, in which case you will be sent back to the folder prompt.
+4. Go back into the folder with the file you edited, you should see the changes you made take effect.
+5. That's it! Your file has been edited. If you don't want your file edited, don't follow these steps.
 
-![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/table_example.png?raw=true)][logo3]
+Deleting Files: I don't need to make section for deleting files, click the red 'X' next to the edit icon, and your file will be removed.
 
-[logo3]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/table_example.png?raw=true "Logo Title Text 2"
-*Example of a populated Sync Table from folder data*
+### Accessing Key Shortcuts
+While you can simply click your way through uploading we have plenty of shortcuts to make it faster! Simply click on 'Shortcuts' in the navbar and a list of all shortcuts will be displayed.
 
-### Creating New Folders
-1. Enter a new folder name into the box below, ensure the name you picked isn't already an existing folder.
-2. Upload at least one file and the folder should appear in the 'Data Folders' tab in 'Data Options'.
-3. That's It! Your new Folder containing your new file should now be under 'Data Options'.
+That's it, you're now a QuickShare Pro!
 
-### Understanding Sync Tables
-Think of Sync Tables as a place that you spread out your folder data to view and manipulate files.
-Once you enter a folder name, the Sync Table shows you results from data within that specified folder.
-Then you can perform actions such as uploading, downloading, and deleting files.
+### Latest Release Notes:
 
-## Becoming A 'Pro'
-1. You've Installed the 'QuickShare Portal'.
-2. You've Learned About 'File Repositories'.
-3. Now It's Time to Become A "Pro"!
+#### gtm-quickshare Patch Notes | Released: 2.18.2020 | [V-1.1.0-Beta]:
+* Bug Fixes/Improvements:
+  * Fixed a bug that let users push undefined, null, and empty file content.
+  * The file upload option becomes disabled when a user is viewing all folders to avoid pushing data outside of folders.
+  * The 'Push File' button is no longer present on every Data Options tab.
+  * Fixed a glitch that caused 'File Action' tooltips to not display.
+  * Fixed an issue causing the date and time to display incorrect Am/Pm values.
+  * Fixed a problem where the last updated date and time wouldn't show leading zeros and display incorrectly formatted times.
+* New Features:
+  * Users can now edit the name of their files.
+  * Changed the icons for edit and delete to better fit the page.
+  * 'Last Updated' dates now display when a file has been edited.
+  * Created blue and yellow checkmarks to indicate when a file is new or has been updated.
 
-### File Search
-You may have noticed the 'File Search' field under the 'Data Options' button in the Sync Table.
-If you haven't, there it is! You can use it to filter results from your data. This is handy if
-there are more than 10 files in a table, allowing you to get right to the files you need to do
-whatever it is your doing with them. Try it! Look for a file in the table and search for it.
-You will notice the table will remove files that don't match your search criteria but will
-show multiple files if they share farmiliar characteristics.
+#### gtm-quickshare Patch Notes | Released: 1.14.2020 | [V-1.0.0-Beta]:
+* Bug Fixes/Improvements:
+  * Fixed a bug causing files to be shown as 'Undefined' when leaving the folder select prompt blank.
+  * When leaving the folder select prompt blank, you will no longer see an invisible folder name.
+  * Date added no longer contains the current date prior to pushing files.
+  * Removed the bugged overflow border from 'All Folders'.
+  * The 'About' section no longer appears under any of the current data collections.
+  * The 'About' link actually works now, smooth scrolling you to the about content.
+  * Fixed a glitch causing the 'scroll back to top' button from not rendering.
+* New Features:
+  * All datatables now contain file pagination.
+  * Migrated source code to Node Express using the Handlebars view engine.
+  * Migrated from Bootstrap to Material Design Bootstrap.
 
-![https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/table_filter_example.gif?raw=true][logo4]
+#### gtm-quickshare Patch Notes | Released: 7.25.2019 | [V-1.0.0-Alpha]:
+* Bug Fixes/Improvements:
+  * Fixed a bug causing the upload sound not to play during a shortcut upload.
+  * Fixed a bug that caused the IE detector not to display the browser warning.
+* New Features:
+  * Deleting a file no longer requires you to enter a 'unique ID'.
+  * The table now displays the number of files contained within a folder.
+  * Added search filtering to make searching files through Sync Tables easier.
+  * The Sync Table has been totally redesigned with even smarter autofill features.
+  * Got rid of the boring old carousel photos in favor of better looking gifs.
+  * Added a few more featurettes to the landing page to better answer 'WHY QuickShare?'.
+  * GTM QuickShare has a fresh new design from it's previous beta build.
+  * Updated the Folder navigation prompt to better explain the upload process.
 
-[logo4]: https://github.com/IAmShawn98/gtm-quickshare/blob/master/public/assets/images/documentation-explanation/table_filter_example.gif?raw=true "Logo Title Text 2"
-*This is a demo of file searching.*
-
-### Downloading Files
-This one is pretty simple - In the Sync Table under 'File Name' click on any of file names to receive them.
-
-### Uploading Files
-'Casucal' (TIME CONSUMING) Upload Approach
-1. Make sure the file you're uploading is zipped before trying to upload them, otherwise your file will not upload.
-2. Navigate to 'Data Options' and click on 'browse' and select the file you want to upload.
-3. Depending on how long it takes to upload, you may see a progress bar letting you know how long your file has left to upload.
-4. Each of the form fields will auto-fill so you don't need to enter any data (But you can if you want to pick file names).
-5. When the file is ready and the 'Upload File' button is availbile to click, click on it.
-6. That's it, your file is now inside the folder you entered and will be present when you refresh the page.
-
-WOW.... SIX ENTIRE STEPS?! I know, but HAVE NO FEAR.... The casual approach is long, but QuickShare PROS know the shortcuts:
-
-'PRO' (TIME SAVING) Upload Approach
-1. Browse File: Shift + D + U.
-2. Push File: Shift + P.
-
-That's it! The entire process has been automated and reduced from SIX STEPS to only TWO steps!
-
-Also, if you want to save a few keystrokes instead of doing Shift + D + U, just do Shift + U.
-Doing this will not only save a keystroke, but you won't even have to look at the form to
-upload files. Just listen for a sound before pushing files. You will hear a sound when the
-file has finished uploading, then do Shift + P to PUSH your file to the Sync Table.
-
-Congrats, you're now a QuickShare PRO!
-
-## Change Logs
-View the latest updates for GTM QuickShare.
-
-### GTM QuickShare V1.0.0-LIVE-T
-* QuickShare Version Updated On 1.14.2020
-  1. **Version Update**:
-  * Migrated GTM QuickShare master source to a new view engine.
-  1. Bugs Fixed:
-   * Fixed a bug causing files to be shown as 'Undefined' when leaving the folder select prompt blank.
-   * When leaving the folder select prompt blank, you will no longer see an invisible folder name.
-   * Date added no longer contains the current date prior to pushing files.
-   * Removed the bugged overflow border from 'All Folders'.
-   * The 'About' section no longer appears under any of the current data collections.
-   * The 'About' link actually works now, smooth scrolling you to the about content.
-   * Fixed a glitch causing the 'scroll back to top' button from not rendering.
-  2. **Features & Updates**:
-   * All datatables now contain file pagination.
-   * Migrated source code to Node Express using the Handlebars view engine.
-   * Migrated from Bootstrap to Material Design Bootstrap.
-
-### GTM QuickShare V1.0.0-LIVE-T
-* QuickShare Version Updated On 7.25.2019
-  1. **Version Update**:
-  * Moved into 'LIVE-T' (V1.0.0-LIVE-T) from 'Closed Beta "DEV DEMO"'.
-  2. Bugs Fixed:
-   * Fixed a bug causing the upload sound not to play during a shortcut upload.
-   * Fixed a bug that caused the IE detector not to display the browser warning.
-  3. **Features & Updates**:
-   * Deleting a file no longer requires you to enter a 'unique ID'.
-   * The table now displays the number of files contained within a folder.
-   * Added search filtering to make searching files through Sync Tables easier.
-   * The Sync Table has been totally redesigned with even smarter autofill features.
-   * Got rid of the boring old carousel photos in favor of better looking gifs.
-   * Added a few more featurettes to the landing page to better answer 'WHY QuickShare?'.
-   * GTM QuickShare has a fresh new design from it's previous beta build.
-   * Updated the Folder navigation prompt to better explain the upload process.
+Please Note: All updates are made here, check back on occasion for future releases.
