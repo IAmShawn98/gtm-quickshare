@@ -13,6 +13,9 @@
     // Only execute script if it matches the URL.
     if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/' + fireConfig.projectId) != -1) {
 
+        // Disable push button so users don't push null submissions.
+        document.getElementById("btnSubmit").style.display = "disabled";
+
         // Get the Current Date For the 'Date Added' Input Field.
         let newDate = new Date();
 
