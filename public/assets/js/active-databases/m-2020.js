@@ -221,7 +221,9 @@
 
                     } else if (fPath == "") {
                         // Populate using hard coded root warning.
-                        fPath = "DataSet Not Detected";
+                        fPath = "DataSet Not Selected";
+                        document.getElementById("SlotName").textContent = "DataSet Not Selected";
+                        document.getElementById("foldName").textContent = "DataSet Not Selected";
                         // Hide the form when no there is no folder selected.
                         $("#UploadForm, #btnSubmit, #dataPopulation").hide();
                         // Disable Data Options when no datasets are selected.
@@ -230,7 +232,7 @@
                         // Notify the user, tell them to pick a dataset.
                         $.notify({
                             // options
-                            title: 'DataSet Not Detected',
+                            title: 'DataSet Not Selected',
                             message: " It looks like you haven't selected any datasets yet. A QuickShare dataset is like a folder collection containing all of your versioned files that are ready to be managed and used. You can access all of your datasets from the dropdown labeled 'Browse DataSets'.",
                         }, {
                             // settings
