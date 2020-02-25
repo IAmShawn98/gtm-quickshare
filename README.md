@@ -105,7 +105,7 @@ That's it, you're now a QuickShare Pro!
   * Replaced 'File Repositories' for collections in place of 'Browse Datasets'.
   * Removed 'All Folders' in favor of 'Browse Datasets'.
 * New Features/Modifications:
-  * 'All Folders' feature has been renamed to '
+  * 'All Folders' feature has been renamed to 'Browse Datasets' and moved to the navbar.
 
 #### gtm-quickshare Patch Notes | Released: 2.18.2020 | [V-1.1.0-Beta]:
 * Bug Fixes/Improvements:
