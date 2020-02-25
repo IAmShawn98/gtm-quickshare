@@ -1,3 +1,2 @@
 User-agent: Googlebot
-Disallow: /views/mc2019.handlebars
 Disallow: /views/m-2020.handlebars

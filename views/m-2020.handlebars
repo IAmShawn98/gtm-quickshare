@@ -25,20 +25,20 @@
                     href="#shortcuts">Shortcuts</a>
             </li>
 
-            {{!-- File Repositories (Dropdown Menu) --}}
-            <li class="nav-item dropdown text-center">
+            {{!-- All Folders --}}
+            <li id="AllDataSets" class="nav-item dropdown text-center">
                 {{!-- Dropdown Button --}}
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown">File Repositories</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">Browse DataSets</a>
                 {{!-- Dropdown Content Container --}}
                 <div class="dropdown-menu text-center">
-                    <h6 class="dropdown-header text-white bg-success">
-                        {{!-- Excel Macros --}}
-                        <i class="fa fa-file-excel" aria-hidden="true"></i> Excel Macros</h6>
+                    <h6 class="dropdown-header text-white bg-primary">
+                        {{!-- Available DataSets --}}
+                        <i class="fa fa-circle text-success" aria-hidden="true"></i> Online DataSets
+                    </h6>
                     <div class="dropdown-divider"></div>
-                    {{!-- 2019 Collection --}}
-                    <a class="dropdown-item p-0" href="/mc2019">2019 Collection</a>
-                    {{!-- 2020 Collection --}}
-                    <a class="dropdown-item p-0" href="/m-2020">2020 Collection</a>
+                    {{!-- Folder Collection Population --}}
+                    {{!-- <a class="dropdown-item p-0" href="/mc2019"></a> --}}
+                    <span id="AllFolders"></span>
                 </div>
             </li>
         </ul>
@@ -142,11 +142,11 @@
                         <a class="nav-link active" data-toggle="tab" href="#fileUpload" role="tab"
                             aria-selected="true">Upload Files</a>
                     </li>
-                    <li class="nav-item item-2">
+                    {{!-- <li class="nav-item item-2">
                         <a class="nav-link" data-toggle="tab" href="#dataFolders" role="tab" aria-selected="false">
                             <span id="tabFolders">All Folders</span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
                 <!-- Modal Title -->
                 <div class="modal-header">
@@ -184,29 +184,22 @@
                                             placeholder="This field will become the download link for your file. You don't need to add anything to this field, it is an automatic process."
                                             rows="3"></textarea>
                                         <div class="md-form">
-                                            <input type="text" autocomplete="off" maxlength="18" id="fName" name="fName" value=" "
-                                                class="form-control">
+                                            <input type="text" autocomplete="off" maxlength="18" id="fName" name="fName"
+                                                value=" " class="form-control">
                                             <label for="form1" class="active">File Name</label>
                                         </div>
                                         <div style="display: none;" class="md-form">
-                                            <input type="text" autocomplete="off" maxlength="18" id="fDate" name="fDate" value=" "
-                                                class="form-control" disabled="disabled">
+                                            <input type="text" autocomplete="off" maxlength="18" id="fDate" name="fDate"
+                                                value=" " class="form-control" disabled="disabled">
                                             <label for="form1" class="active">Date Added</label>
                                         </div>
                                         <div style="display: none;" class="md-form">
-                                            <input type="text" autocomplete="off" maxlength="18" id="fSize" name="fSize" value=" "
-                                                class="form-control">
+                                            <input type="text" autocomplete="off" maxlength="18" id="fSize" name="fSize"
+                                                value=" " class="form-control">
                                             <label for="form1" class="active">File Size</label>
                                         </div>
                                     </div>
                                 </div>
-                        </div>
-                        <!-- Edit File Info -->
-                        <div class="tab-pane fade" id="dataFolders">
-                            <p class="lead">
-                                These are all known folders from this repository.
-                            </p>
-                            <span id="AllFolders"></span>
                         </div>
                     </div>
                 </div>

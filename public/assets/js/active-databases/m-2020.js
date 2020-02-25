@@ -11,10 +11,11 @@
     };
 
     // Only execute script if it matches the URL.
-    if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/' + fireConfig.projectId) != -1) {	
+    if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/' + fireConfig.projectId) != -1) {
 
-        // Disable push button so users don't push null submissions.
+        // Disable push button so users don't push null submissions & hide datasets until ready.
         document.getElementById("btnSubmit").disabled = true;
+        $("#AllDataSets").show();
 
         // Get the Current Date For the 'Date Added' Input Field.
         let newDate = new Date();
@@ -110,9 +111,12 @@
                         // Font Awesome Icon.
                         icon: 'fa fa-exclamation-triangle',
                         // Toast Title.
-                        title: '<b>File Upload Success:</b> ',
+                        title: '<b>File Backup Created!</b> ',
                         // Toast Message.
-                        message: 'Your file, "' + file.name + '", was recently uploaded to site storage. Click the "Upload File" button to push details to the public repository.',
+                        message: 'A backup was created for "' + file.name + '". In order to make your file public, please click "push file", or, use shortcut (Ctrl + P) to finish importing this file.',
+                    }, {
+                        // settings
+                        allow_dismiss: true,
                     });
                 }
                 // Hide progress bar.
@@ -212,19 +216,27 @@
                         // Populate using the official DB reference.
                         document.getElementById("SlotName").textContent = fPath;
                         document.getElementById("foldName").textContent = fPath;
-                        $("#tabFolders").hide();
+                        // Hide tabs.
+                        $("#tabFolders").show();
 
                     } else if (fPath == "") {
                         // Populate using hard coded root warning.
-                        document.getElementById("SlotName").textContent = "All Folders (Root)";
-                        document.getElementById("foldName").textContent = "All Folders (Root)";
+                        fPath = "DataSet Not Detected";
                         // Hide the form when no there is no folder selected.
-                        $("#UploadForm, #btnSubmit").hide();
+                        $("#UploadForm, #btnSubmit, #dataPopulation").hide();
+                        // Disable Data Options when no datasets are selected.
+                        $("#UploadForm, #btnSubmit, #dataOptions, .modal-backdrop.fade").remove();
 
-                        // Show All Folders.
-                        $(".fa-cog").click();
-                        $("#tabFolders").click();
-                        $("#dataPopulate").hide();
+                        // Notify the user, tell them to pick a dataset.
+                        $.notify({
+                            // options
+                            title: 'DataSet Not Detected',
+                            message: " It looks like you haven't selected any datasets yet. A QuickShare dataset is like a folder collection containing all of your versioned files that are ready to be managed and used. You can access all of your datasets from the dropdown labeled 'Browse DataSets'.",
+                        }, {
+                            // settings
+                            allow_dismiss: true,
+                            allow_duplicates: false,
+                        });
                     }
                     // Stores the unique key generated for each file.
                     let key = childSnapshot.key;
@@ -275,7 +287,7 @@
                     if (fPath == "" || " " || null) {
                         // Loop through and populate the 'All Folders' tab with each folder name.
                         for (let i = 0; i < key.length; ++i) {
-                            let buttons = $('<a href="https://gtm-quickshare.herokuapp.com/' + fireConfig.projectId + '"><button style="font-size: 150%; margin-top: 10px; width: 100%; height: 50px;"><i class="fa fa-folder text-warning float-left" aria-hidden="true"></i> <b class="text-primary">' + key + '</b></button><br />')
+                            let buttons = $('<a href="https://gtm-quickshare.herokuapp.com/' + fireConfig.projectId + '" class="dropdown-item p-0" href="/mc2019">' + key + '</a>')
                             buttons.appendTo('#AllFolders');
                             break;
                         }
@@ -323,57 +335,43 @@
                 });
             });
 
-        // File Size Calculator.
-        $(document).ready(function () {
-            $("#fBrowser").change(function () {
-                let iSize = ($("#fBrowser")[0].files[0].size / 1024);
-                if (iSize / 1024 > 1) {
-                    if (((iSize / 1024) / 1024) > 1) {
-                        iSize = (Math.round(((iSize / 1024) / 1024) * 100) / 100);
-                        $("#fSize").val(iSize + " GB");
-                    } else {
-                        iSize = (Math.round((iSize / 1024) * 100) / 100)
-                        $("#fSize").val(iSize + " MB");
-                    }
+        // Calculates the size of incoming files.
+        $("#fBrowser").change(function () { // If a file is detected from the browser, execute size check.
+            let iSize = ($("#fBrowser")[0].files[0].size / 1024);
+            if (iSize / 1024 > 1) {
+                if (((iSize / 1024) / 1024) > 1) {
+                    iSize = (Math.round(((iSize / 1024) / 1024) * 100) / 100);
+                    $("#fSize").val(iSize + " GB");
                 } else {
-                    iSize = (Math.round(iSize * 100) / 100)
-                    $("#fSize").val(iSize + " KB");
+                    iSize = (Math.round((iSize / 1024) * 100) / 100)
+                    $("#fSize").val(iSize + " MB");
                 }
-            });
-        });
-
-        // Shortcut to 'Data Options'.
-        $(this).on('keypress', function (event) {
-            let keyU = 68; // 'D' Key.
-            if (event.keyCode == keyU) {
-                $(".fa-cog").click();
+            } else {
+                iSize = (Math.round(iSize * 100) / 100)
+                $("#fSize").val(iSize + " KB");
             }
         });
 
-        // Shortcut to 'Upload Files'.
-        $(this).on('keypress', function (event) {
-            let keyU = 85; // 'U' Key.
-            if (event.keyCode == keyU) {
-                $("#fBrowser").click();
-            }
-        });
-
-        // Shortcut to 'Push File'.
-        $(this).on('keypress', function (event) {
-            let keyU = 80; // 'P' Key.
-            if (event.keyCode == keyU) {
-                $("#btnSubmit").click();
-                setTimeout(() => {
-                    window.location.reload();
-                }, 10);
-            }
-        });
-
-        // Shortcut to 'Shortcuts List'.
-        $(this).on('keypress', function (event) {
-            let keyU = 83; // 'S' Key.
-            if (event.keyCode == keyU) {
-                $("#ShortcutMenu").click();
+        // Initialize document keydown events for shortcuts.
+        $(document).keydown(function (e) {
+            // If the user presses any of the following key events, fire off their associated case.
+            switch (e.which) {
+                case 83: // Shortcut to 'Shortcuts List'.
+                    $("#ShortcutMenu").click();
+                    break;
+                case 68: // Shortcut to 'Data Options'.
+                    $(".fa-cog").click();
+                    break;
+                case 85: // Shortcut to 'Upload Files'.
+                    $("#fBrowser").click();
+                    break;
+                case 80: // Shortcut to 'Push File'.
+                    $("#btnSubmit").click(); // Simulate push.
+                    // Timeout event.
+                    setTimeout(() => { // Timeout reload so we have time to push changes.
+                        window.location.reload();
+                    }, 10); // Timeout duration: 0.01s.
+                    break;
             }
         });
     }

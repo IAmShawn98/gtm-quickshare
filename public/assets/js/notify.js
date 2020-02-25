@@ -25,7 +25,7 @@
 		element: 'body',
 		position: null,
 		type: "success",
-		allow_dismiss: true,
+		allow_dismiss: false,
 		allow_duplicates: false,
 		newest_on_top: true,
 		showProgressbar: false,
@@ -37,12 +37,12 @@
 		spacing: 10,
 		z_index: 1031,
 		delay: 8000,
-		timer: 1000,
+		timer: 6000,
 		url_target: '_blank',
 		mouse_over: null,
 		animate: {
 			enter: 'animated fadeInRight',
-			exit: 'animated fadeOutRight'
+			exit: 'animated fadeOutUp slow'
 		},
 		onShow: null,
 		onShown: null,
@@ -50,11 +50,10 @@
 		onClosed: null,
 		onClick: null,
 		icon_type: 'class',
-		template: '<div id="toast" class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">' +
-			'<div class="toast-header">' +
+		template: '<div id="toast" class="toast fade show text-primary" role="alert" aria-live="assertive" aria-atomic="true">' +
+			'<div class="toast-header text-success">' +
 			'<strong class="mr-auto">{1}</strong>' +
-			'<small class="text-muted">just now</small>' +
-			'<button type="button" onclick="removePrompt();" class="ml-2 mb-1 close" data-dismiss="toast"  aria-label="Close">' +
+			'<button type="button" class="ml-2 mb-1 text-danger close" data-notify="dismiss" aria-label="Close">' +
 			'<span aria-hidden="true">×</span></button> </div> <div class="toast-body">{2}</div>' +
 			'</div>'
 	};
