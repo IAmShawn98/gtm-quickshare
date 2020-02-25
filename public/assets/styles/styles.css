@@ -83,3 +83,12 @@ body {
   cursor: inherit;
   display: block;
 }
+
+#fSize {
+  position: fixed;
+  background: none;
+  color: #ffffff;
+  margin-left: 5px;
+  border: none;
+  padding: 0;
+}
