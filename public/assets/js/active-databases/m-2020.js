@@ -11,7 +11,7 @@
     };
 
     // Only execute script if it matches the URL.
-    if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/' + fireConfig.projectId) != -1) {
+    if (window.location.href.indexOf('localhost:3000/' + fireConfig.projectId) != -1) {
 
         // Disable push button so users don't push null submissions & hide datasets until ready.
         document.getElementById("btnSubmit").disabled = true;
@@ -47,7 +47,7 @@
         let btnUpload = document.getElementById('fBrowser');
 
         // This is the submit event for uploading files.
-        btnUpload.addEventListener('change', function (e) {
+        btnUpload.addEventListener('change', (e) => {
             // The percent value element.
             const uploader = document.getElementById("uploader");
             // Target and save file data.
@@ -125,7 +125,7 @@
         });
 
         // When the user clicks on the 'Upload File' button, initialize a form capture to gather input values.
-        $("#formSubmit").on("submit", function (e) {
+        $("#formSubmit").on("submit", (e) => {
             // Prevent default form behavior so the page doesn't refresh.
             e.preventDefault();
 
@@ -207,8 +207,8 @@
         // Populate the Sync Table with each new entry in order by key.
         let userDataRef = firebase.database().ref(fireConfig.projectId + "/" + fPath).orderByKey();
         userDataRef.once('value')
-            .then(function (snapshot) {
-                snapshot.forEach(function (childSnapshot) {
+            .then((snapshot) => {
+                snapshot.forEach((childSnapshot) => {
                     // If the name of the folder is correct, use the shorthand name typed by the user.
                     // If it is otherwise wrong, use the population name. This will ensure that when
                     // it fails, it will instead use the 'All Folders (Root)' name instead of white space.
@@ -248,7 +248,7 @@
                     let fSize = childSnapshot.val().fSize // File Size.
                     let fDate = childSnapshot.val().fDate; // File Date.
 
-                    // Format our table into a datatable.
+                    // Format datatable.
                     let table = $('#dataPopulation').DataTable({
                         lengthMenu: [4, 8, 20, 40, 80, 100],
                         "scrollY": "350px",
@@ -308,7 +308,7 @@
                         }
                     });
                     // Edits a single row in the table.
-                    $(".fa-edit").on('click', function () {
+                    $(".fa-edit").on('click', () => {
                         for (let l = 0; l < key.length; ++l) {
                             // Modify fName prompt.
                             let mName = prompt("Enter a new name for '" + fName + "' in the box below and click 'OK'.");
@@ -338,7 +338,7 @@
             });
 
         // Calculates the size of incoming files.
-        $("#fBrowser").change(function () { // If a file is detected from the browser, execute size check.
+        $("#fBrowser").change(() => { // If a file is detected from the browser, execute size check.
             let iSize = ($("#fBrowser")[0].files[0].size / 1024);
             if (iSize / 1024 > 1) {
                 if (((iSize / 1024) / 1024) > 1) {
@@ -355,7 +355,7 @@
         });
 
         // Initialize document keydown events for shortcuts.
-        $(document).keydown(function (e) {
+        $(document).keydown((e) => {
             // If the user presses any of the following key events, fire off their associated case.
             switch (e.which) {
                 case 83: // Shortcut to 'Shortcuts List'.
