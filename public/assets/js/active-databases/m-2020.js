@@ -11,7 +11,7 @@
     };
 
     // Only execute script if it matches the URL.
-    if (window.location.href.indexOf('https://gtm-quickshare.herokuapp.com/' + fireConfig.projectId) != -1) {
+    if (window.location.href.indexOf('localhost:3000/' + fireConfig.projectId) != -1) {
 
         // Disable push button so users don't push null submissions & hide datasets until ready.
         document.getElementById("btnSubmit").disabled = true;
@@ -233,7 +233,7 @@
                         $.notify({
                             // options
                             title: 'DataSet Not Selected',
-                            message: " It looks like you haven't selected any datasets yet. A QuickShare dataset is like a folder collection containing all of your versioned files that are ready to be managed and used. You can access all of your datasets from the dropdown labeled 'Browse DataSets'.",
+                            message: "A QuickShare DataSet is like a folder group containing your uploaded files. Click 'Browse DatsSets' to view all collections from the dropdown.",
                         }, {
                             // settings
                             allow_dismiss: true,
