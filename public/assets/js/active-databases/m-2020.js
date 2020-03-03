@@ -117,6 +117,7 @@
                     }, {
                         // settings
                         allow_dismiss: true,
+                        allow_duplicates: false
                     });
                 }
                 // Hide progress bar.
@@ -137,7 +138,7 @@
                 window.location.reload();
             }, 10);
 
-            alert("Your file has been successfully pushed to " + fireConfig.projectId + "!")
+            alert("Your file has been successfully pushed to " + fireConfig.projectId + "!");
         });
 
         // When a submitssion is triggered by the user, listen to each field of reference and save the data.
@@ -258,7 +259,7 @@
                     // *******************************************************************SYNC TABLE**********************************************************************************************************************************************
                     let dataSet = [
                         // File Name.
-                        ["<td>" + "<a class='text-info' href='" + fLink + "'><span class='domFName'>" + fName + "</span></a></td>"],
+                        ["<td id='" + fName + "'>" + "<a class='text-info' href='" + fLink + "'><span class='domFName'>" + fName + "</span></a></td>"],
                         [
                             // File Size.
                             ['<td>' + fSize + '</td>']

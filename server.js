@@ -2,7 +2,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
-// const helpers = require('./helpers');
 
 // REQUIRE ROUTING PATHS ------------------------------------
 

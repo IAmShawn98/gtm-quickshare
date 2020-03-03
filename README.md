@@ -73,6 +73,8 @@ In this section we will go over uploading, editing, and deleting files from a Da
 3. A file browser should pop up, search for the file you are looking to upload and click 'Open', or double click the file.
 4. At this point, your file has been pushed to site storage. Click on 'Push File' or use shortcut 'Shift + p' to finish importing.
 
+Alternitive Upload Method: You can also drag and drop your files onto the 'Upload File' button!
+
 That's it! If your file successfully pushes to the table an alert box will let you know it was successful. When the upload process is complete, you will be taken back to the prompt box. In order to view your newly uploaded file, enter the name of the Dataset you
 created, your file should be there, ready to maintain and use. If you don't remember the name of your Dataset, it can be found
 by checking all existing Datasets (read 'Show All Existing Datasets' for a refresher) on how to do that.
